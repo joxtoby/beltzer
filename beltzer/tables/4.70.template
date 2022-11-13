@@ -1,0 +1,18 @@
+10	10	Parameter category (see Code Table 4.1 )
+11	11	Parameter number (see Code Table 4.2 )
+12	13	Input process identifier (see Note 1)
+14	15	Input originating centre (see Common Code table C–11 and Note 2)
+16	16	Type of post-processing (see Note 3)
+17	17	Type of generating process (see Code Table 4.3 )
+18	18	Background generating process identifier (defined by originating centre)
+19	19	Analysis or forecast generating process identified       (see Code ON388 Table A )
+20	21	Hours of observational data cut-off after reference time (see Note 4)
+22	22	Minutes after reference time data cutoff
+23	23	Indicator of unit of time range (see Code Table 4.4 )
+24	27	Forecast time in units defined by octet 23
+28	28	Type of first fixed surface (see Code Table 4.5 )
+29	29	Scale factor of first fixed surface
+30	33	Scaled value of first fixed surface
+34	34	Type of second fixed surfaced (see Code Table 4.5 )
+35	35	Scale factor of second fixed surface
+36	39	Scaled value of second fixed surfaces

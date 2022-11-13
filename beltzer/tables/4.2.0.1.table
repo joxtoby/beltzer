@@ -1,0 +1,216 @@
+0	0	Specific Humidity	kg kg -1	SPFH
+1	1	Relative Humidity	%	RH
+2	2	Humidity Mixing Ratio	kg kg -1	MIXR
+3	3	Precipitable Water	kg m -2	PWAT
+4	4	Vapour Pressure	Pa	VAPP
+5	5	Saturation Deficit	Pa	SATD
+6	6	Evaporation	kg m -2	EVP
+7	7	Precipitation Rate	kg m -2 s -1	PRATE
+8	8	Total Precipitation	kg m -2	APCP
+9	9	Large-Scale Precipitation (non-convective)	kg m -2	NCPCP
+10	10	Convective Precipitation	kg m -2	ACPCP
+11	11	Snow Depth	m	SNOD
+12	12	Snowfall Rate Water Equivalent	kg m -2 s -1	SRWEQ
+13	13	Water Equivalent of Accumulated Snow Depth	kg m -2	WEASD
+14	14	Convective Snow	kg m -2	SNOC
+15	15	Large-Scale Snow	kg m -2	SNOL
+16	16	Snow Melt	kg m -2	SNOM
+17	17	Snow Age	day	SNOAG
+18	18	Absolute Humidity	kg m -3	ABSH
+19	19	Precipitation Type	See Table 4.201	PTYPE
+20	20	Integrated Liquid Water	kg m -2	ILIQW
+21	21	Condensate	kg kg -1	TCOND
+22	22	Cloud Mixing Ratio	kg kg -1	CLMR
+23	23	Ice Water Mixing Ratio	kg kg -1	ICMR
+24	24	Rain Mixing Ratio	kg kg -1	RWMR
+25	25	Snow Mixing Ratio	kg kg -1	SNMR
+26	26	Horizontal Moisture Convergence	kg kg -1 s -1	MCONV
+27	27	Maximum Relative Humidity	%	MAXRH
+28	28	Maximum Absolute Humidity	kg m -3	MAXAH
+29	29	Total Snowfall	m	ASNOW
+30	30	Precipitable Water Category	See Table 4.202	PWCAT
+31	31	Hail	m	HAIL
+32	32	Graupel	kg kg -1	GRLE
+33	33	Categorical Rain	Code table 4.222	CRAIN
+34	34	Categorical Freezing Rain	Code table 4.222	CFRZR
+35	35	Categorical Ice Pellets	Code table 4.222	CICEP
+36	36	Categorical Snow	Code table 4.222	CSNOW
+37	37	Convective Precipitation Rate	kg m -2 s -1	CPRAT
+38	38	Horizontal Moisture Divergence	kg kg -1 s -1	MDIVER
+39	39	Percent frozen precipitation	%	CPOFP
+40	40	Potential Evaporation	kg m -2	PEVAP
+41	41	Potential Evaporation Rate	W m -2	PEVPR
+42	42	Snow Cover	%	SNOWC
+43	43	Rain Fraction of Total Cloud Water	Proportion	FRAIN
+44	44	Rime Factor	Numeric	RIME
+45	45	Total Column Integrated Rain	kg m -2	TCOLR
+46	46	Total Column Integrated Snow	kg m -2	TCOLS
+47	47	Large Scale Water Precipitation (Non-Convective)	kg m -2	LSWP
+48	48	Convective Water Precipitation	kg m -2	CWP
+49	49	Total Water Precipitation	kg m -2	TWATP
+50	50	Total Snow Precipitation	kg m -2	TSNOWP
+51	51	Total Column Water (Vertically integrated total water (vapour+cloud water/ice)	kg m -2	TCWAT
+52	52	Total Precipitation Rate	kg m -2 s -1	TPRATE
+53	53	Total Snowfall Rate Water Equivalent	kg m -2 s -1	TSRWE
+54	54	Large Scale Precipitation Rate	kg m -2 s -1	LSPRATE
+55	55	Convective Snowfall Rate Water Equivalent	kg m -2 s -1	CSRWE
+56	56	Large Scale Snowfall Rate Water Equivalent	kg m -2 s -1	LSSRWE
+57	57	Total Snowfall Rate	m s -1	TSRATE
+58	58	Convective Snowfall Rate	m s -1	CSRATE
+59	59	Large Scale Snowfall Rate	m s -1	LSSRATE
+60	60	Snow Depth Water Equivalent	kg m -2	SDWE
+61	61	Snow Density	kg m -3	SDEN
+62	62	Snow Evaporation	kg m -2	SEVAP
+63	63	Reserved
+64	64	Total Column Integrated Water Vapour	kg m -2	TCIWV
+65	65	Rain Precipitation Rate	kg m -2 s -1	RPRATE
+66	66	Snow Precipitation Rate	kg m -2 s -1	SPRATE
+67	67	Freezing Rain Precipitation Rate	kg m -2 s -1	FPRATE
+68	68	Ice Pellets Precipitation Rate	kg m -2 s -1	IPRATE
+69	69	Total Column Integrate Cloud Water	kg m -2	TCOLW
+70	70	Total Column Integrate Cloud Ice	kg m -2	TCOLI
+71	71	Hail Mixing Ratio	kg kg -1	HAILMXR
+72	72	Total Column Integrate Hail	kg m -2	TCOLH
+73	73	Hail Prepitation Rate	kg m -2 s -1	HAILPR
+74	74	Total Column Integrate Graupel	kg m -2	TCOLG
+75	75	Graupel (Snow Pellets) Prepitation Rate	kg m -2 s -1	GPRATE
+76	76	Convective Rain Rate	kg m -2 s -1	CRRATE
+77	77	Large Scale Rain Rate	kg m -2 s -1	LSRRATE
+78	78	Total Column Integrate Water (All components including precipitation)	kg m -2	TCOLWA
+79	79	Evaporation Rate	kg m -2 s -1	EVARATE
+80	80	Total Condensate	kg kg -1	TOTCON
+81	81	Total Column-Integrate Condensate	kg m -2	TCICON
+82	82	Cloud Ice Mixing Ratio	kg kg -1	CIMIXR
+83	83	Specific Cloud Liquid Water Content	kg kg -1	SCLLWC
+84	84	Specific Cloud Ice Water Content	kg kg -1	SCLIWC
+85	85	Specific Rain Water Content	kg kg -1	SRAINW
+86	86	Specific Snow Water Content	kg kg -1	SSNOWW
+87	87	Stratiform Precipitation Rate	kg m -2 s -1	STRPRATE
+88	88	Categorical Convective Precipitation	Code table 4.222	CATCP
+89	89	Reserved
+90	90	Total Kinematic Moisture Flux	kg kg -1 m s -1	TKMFLX
+91	91	U-component (zonal) Kinematic Moisture Flux	kg kg -1 m s -1	UKMFLX
+92	92	V-component (meridional) Kinematic Moisture Flux	kg kg -1 m s -1	VKMFLX
+93	93	Relative Humidity With Respect to Water	%	RHWATER
+94	94	Relative Humidity With Respect to Ice	%	RHICE
+95	95	Freezing or Frozen Precipitation Rate	kg m -2 s -1	FZPRATE
+96	96	Mass Density of Rain	kg m -3	MASSDR
+97	97	Mass Density of Snow	kg m -3	MASSDS
+98	98	Mass Density of Graupel	kg m -3	MASSDG
+99	99	Mass Density of Hail	kg m -3	MASSDH
+100	100	Specific Number Concentration of Rain	kg -1	SPNCR
+101	101	Specific Number Concentration of Snow	kg -1	SPNCS
+102	102	Specific Number Concentration of Graupel	kg -1	SPNCG
+103	103	Specific Number Concentration of Hail	kg -1	SPNCH
+104	104	Number Density of Rain	m -3	NUMDR
+105	105	Number Density of Snow	m -3	NUMDS
+106	106	Number Density of Graupel	m -3	NUMDG
+107	107	Number Density of Hail	m -3	NUMDH
+108	108	Specific Humidity Tendency due to Parameterizations	kg kg -1 s -1	SHTPRM
+109	109	Mass Density of Liquid Water Coating on Hail        Expressed as Mass of Liquid Water per Unit Volume of Air	kg m -3	MDLWHVA
+110	110	Specific Mass of Liquid Water Coating on Hail         Expressed as Mass of Liquid Water per Unit Mass of Moist Air	kg kg -1	SMLWHMA
+111	111	Mass Mixing Ratio of Liquid Water Coating on Hail                Expressed as Mass of Liquid Water per Unit Mass of Dry Air	kg kg -1	MMLWHDA
+112	112	Mass Density of Liquid Water Coating on Graupel         Expressed as Mass of Liquid Water per Unit Volume of Air	kg m -3	MDLWGVA
+113	113	Specific Mass of Liquid Water Coating on Graupel        Expressed as Mass of Liquid Water per Unit Mass of Moist Air	kg kg -1	SMLWGMA
+114	114	Mass Mixing Ratio of Liquid Water Coating on Graupel        Expressed as Mass of Liquid Water per Unit Mass of Dry Air	kg kg -1	MMLWGDA
+115	115	Mass Density of Liquid Water Coating on Snow        Expressed as Mass of Liquid Water per Unit Volume of Air	kg m -3	MDLWSVA
+116	116	Specific Mass of Liquid Water Coating on Snow        Expressed as Mass of Liquid Water per Unit Mass of Moist Air	kg kg -1	SMLWSMA
+117	117	Mass Mixing Ratio of Liquid Water Coating on Snow        Expressed as Mass of Liquid Water per Unit Mass of Dry Air	kg kg -1	MMLWSDA
+118	118	Unbalanced Component of Specific Humidity	kg kg -1	UNCSH
+119	119	Unbalanced Component of Specific Cloud Liquid Water content	kg kg -1	UCSCLW
+120	120	Unbalanced Component of Specific Cloud Ice Water content	kg kg -1	UCSCIW
+121	121	Fraction of Snow Cover	Proportion	FSNOWC
+122	122	Precipitation intensity index	See Table 4.247	PIIDX
+123	123	Dominant precipitation type	See Table 4.201	DPTYPE
+124	124	Presence of showers	See Table 4.222	PSHOW
+125	125	Presence of blowing snow	See Table 4.222	PBSNOW
+126	126	Presence of blizzard	See Table 4.222	PBLIZZ
+127	127	Ice pellets (non-water equivalent) precipitation rate	m s -1	ICEP
+128	128	Total solid precipitation rate	kg m -2 s -1	TSPRATE
+129	129	Effective radius of cloud water	m	ERADCW
+130	130	Effective radius of rain	m	ERADRAIN
+131	131	Effective radius of cloud ice	m	ERADCICE
+132	132	Effective radius of snow	m	ERADSNOW
+133	133	Effective radius of graupel	m	ERADGRL
+134	134	Effective radius of hail	m	ERADHAIL
+135	135	Effective radius of subgrid liquid clouds	m	ERADSLC
+136	136	Effective radius of subgrid ice clouds	m	ERADSIC
+137	137	Effective aspect ratio of rain		ERATIOR
+138	138	Effective aspect ratio of cloud ice		ERATIOCI
+139	139	Effective aspect ratio of snow		ERATIOS
+140	140	Effective aspect ratio of graupel		ERATIOG
+141	141	Effective aspect ratio of hail		ERATIOH
+142	142	Effective ratio of subgrid ice clouds		ERATOSIC
+143	143	Potential evaporation rate	kg m -2 s -1	PERATE
+144	144	Specific rain water content (convective)	kg kg -1	SRWATERC
+145	145	Specific snow water content (convective)	kg kg -1	SSNOWWC
+146	146	Cloud ice precipitation rate	kg m -2 s -1	CICEPR
+147	147	Character of precipitation	See Table 4.249	PERATE
+148	148	Snow evaporation rate (see Note 9)	kg m -2 s -1	SNOWERAT
+149	149	Cloud water mixing ratio	kg kg -1	CWATERMR
+150	128	Reserved
+129	129	Effective Radius of Cloud Water	m	EFRCWAT
+130	130	Effective Radius of Rain	m	EFRRAIN
+131	131	Effective Radius of Cloud Ice	m	EFRCICE
+132	132	Effective Radius of Snow	m	EFRSNOW
+133	133	Effective Radius of Graupel	m	EFRGRL
+134	134	Effective Radius of Hail	m	EFRHAIL
+135	135	Effective Radius of Subgrid Liquid Clouds	m	EFRSLC
+136	136	Effective Radius of Subgrid Ice Clouds	m	EFRSICEC
+137	137	Effective Aspect Ratio of Rain		EFARRAIN
+138	138	Effective Aspect Ratio of Cloud Ice		EFARCICE
+139	139	Effective Aspect Ratio of Snow		EFARSNOW
+140	140	Effective Aspect Ratio of Graupel		EFARGRL
+141	141	Effective Aspect Ratio of Hail		EFARHAIL
+142	142	Effective Aspect Ratio of Subgrid Ice Clouds		EFARSIC
+143	191	Reserved
+192	192	Categorical Rain	Code table 4.222	CRAIN
+193	193	Categorical Freezing Rain	Code table 4.222	CFRZR
+194	194	Categorical Ice Pellets	Code table 4.222	CICEP
+195	195	Categorical Snow	Code table 4.222	CSNOW
+196	196	Convective Precipitation Rate	kg m -2 s -1	CPRAT
+197	197	Horizontal Moisture Divergence	kg kg -1 s -1	MDIV
+198	198	Minimum Relative Humidity	%	MINRH
+199	199	Potential Evaporation	kg m -2	PEVAP
+200	200	Potential Evaporation Rate	W m -2	PEVPR
+201	201	Snow Cover	%	SNOWC
+202	202	Rain Fraction of Total Liquid Water	non-dim	FRAIN
+203	203	Rime Factor	non-dim	RIME
+204	204	Total Column Integrated Rain	kg m -2	TCOLR
+205	205	Total Column Integrated Snow	kg m -2	TCOLS
+206	206	Total Icing Potential Diagnostic	non-dim	TIPD
+207	207	Number concentration for ice particles	non-dim	NCIP
+208	208	Snow temperature	K	SNOT
+209	209	Total column-integrated supercooled liquid water	kg m -2	TCLSW
+210	210	Total column-integrated melting ice	kg m -2	TCOLM
+211	211	Evaporation - Precipitation	cm/day	EMNP
+212	212	Sublimation (evaporation from snow)	W m -2	SBSNO
+213	213	Deep  Convective Moistening Rate	kg kg -1 s -1	CNVMR
+214	214	Shallow Convective Moistening Rate	kg kg -1 s -1	SHAMR
+215	215	Vertical Diffusion Moistening Rate	kg kg -1 s -1	VDFMR
+216	216	Condensation Pressure of Parcali Lifted From Indicate Surface	Pa	CONDP
+217	217	Large scale moistening rate	kg kg -1 s -1	LRGMR
+218	218	Specific humidity at top of viscous sublayer	kg kg -1	QZ0
+219	219	Maximum specific humidity at 2m	kg kg -1	QMAX
+220	220	Minimum specific humidity at 2m	kg kg -1	QMIN
+221	221	Liquid precipitation (Rainfall)	kg m -2	ARAIN
+222	222	Snow temperature, depth-avg	K	SNOWT
+223	223	Total precipitation (nearest grid point)	kg m -2	APCPN
+224	224	Convective precipitation (nearest grid point)	kg m -2	ACPCPN
+225	225	Freezing Rain	kg m -2	FRZR
+226	226	Pblackominant Weather (see Note 1)	Numeric	PWTHER
+227	227	Frozen Rain	kg m -2	FROZR
+228	228	Flat Ice Accumulation (FRAM)	kg m -2	FICEAC
+229	229	Line Ice Accumulation (FRAM)	kg m -2	LICEAC
+230	230	Sleet Accumulation	kg m -2	SLACC
+231	231	Precipitation Potential Index	%	PPINDX
+232	232	Probability Cloud Ice Present	%	PROBCIP
+233	233	Snow Liquid ratio	kg kg -1	SNOWLR
+234	234	Precipitation Duration	hour	PCPDUR
+235	235	Cloud Liquid Mixing Ratio	kg kg -1	CLLMR
+236	240	Reserved
+241	241	Total Snow	kg m -2	TSNOW
+242	242	Relative Humidity with Respect to Precipitable Water	%	RHPW
+245	245	Hourly Maximum of Column Vertical Integrated Graupel on Entire Atmosphere	kg m -2	MAXVIG
+246	254	Reserved for Local Use
+255	255	Missing

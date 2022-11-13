@@ -1,0 +1,22 @@
+0	0	Air Concentration of Caesium 137	Bq m -3	ACCES
+1	1	Air Concentration of Iodine 131	Bq m -3	ACIOD
+2	2	Air Concentration of Radioactive Pollutant	Bq m -3	ACRADP
+3	3	Ground Deposition of Caesium 137	Bq m -2	GDCES
+4	4	Ground Deposition of Iodine 131	Bq m -2	GDIOD
+5	5	Ground Deposition of Radioactive Pollutant	Bq m -2	GDRADP
+6	6	Time Integrated Air Concentration of Cesium Pollutant (See Note 1)	Bq s m -3	TIACCP
+7	7	Time Integrated Air Concentration of Iodine Pollutant (See Note 1)	Bq s m -3
+TIACIP   8	TIACIP   8	Time Integrated Air Concentration of Radioactive Pollutant (See Note 1)	Bq s m -3	TIACRP
+9	9	Reserved		
+10	10	Air Concentration (See Note 3)	Bq m -3	AIRCON
+11	11	Wet Deposition	Bq m -2	WETDEP
+12	12	Dry Deposition	Bq m -2	DRYDEP
+13	13	Total Deposition (Wet + Dry)	Bq m -2	TOTLWD
+14	14	Specific Activity Concentration (See Note 3)	Bq kg -1	SACON
+15	15	Maximum of Air Concentration in Layer	Bq m -3	MAXACON
+16	16	Height of Maximum of Air Concentration	m	HMXACON
+17	17	Column-Integrated Air Concentration	Bq m -2	CIAIRC
+18	18	Column-Averaged Air Concentration in Layer	Bq m -3	CAACL
+19 	191  Reserved		
+192	254	Reserved for Local Use		
+255	255	Missing		

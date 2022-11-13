@@ -1,0 +1,267 @@
+10	10	Parameter category (see Code Table 4.1 )
+11	11	Parameter number (see Code Table 4.2 )
+12	13	Atmospheric Chemical Constituent Type (see Code table 4.230 )
+14	15	Number of mode (N) of distribution (See Note 2)
+16	17	Mode number (l)
+18	19	Type of distribution function (see Code Table 4.240 )
+20	20	Number of following function paramters ( N p ), defined       by type given in octet 18-19 (Type of distribution function)
+21+5(n	1)	List of scale factor of fixed distribution function parameter (p 1 - p N p ),        defined by type of distribution in octet 18-19
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta name="Keywords" content="GRIB">
+  <title>GRIBv2 - Table 4.68</title>
+</head>
+<body style="color: rgb(0, 0, 0); background-color: white;"
+ alink="#ff0000" link="#0000ff" vlink="#551a8b">
+<center>
+<h3>GRIB2 - PRODUCT DEFINITION TEMPLATE 4.68</h3>
+<h3><span style="color: blue;">Individual ensemble forecast, control and perturbed, at a horizontal level<br>
+or in a horizontal layer in a continuous or non-continuous time interval<br>
+for Atmospheric Chemical Constituents based on a distribution function</span></h3>
+<center><b><span style="font-size: 9pt;">Created 11/09/2017<br>
+</center>
+<br>
+<br>
+<center>
+<table style="width: 80%;" border="1" cellpadding="5" cellspacing="0">
+  <tbody>
+    <tr>
+      <th style="text-align: center; background-color: lightgrey;">Octet No.</th>
+      <th style="text-align: center; background-color: lightgrey;">Contents</th>
+    </tr>
+    <tr>
+      <td style="text-align: center;">10<br>
+      </td>
+      <td>Parameter category (see Code <a href="grib2_table4-1.shtml">Table 4.1</a>)<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">11<br>
+      </td>
+      <td style="vertical-align: top;">Parameter number (see Code <a href="grib2_table4-2.shtml">Table 4.2</a>)<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">12-13<br></td>
+      <td style="vertical-align: top;">Atmospheric Chemical Constituent Type (see
+      <a href="grib2_table4-230.shtml">Code table 4.230</a>)<br></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">14-15</td>
+      <td style="vertical-align: top;">Number of mode (N) of distribution (See Note 2)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">16-17</td>
+      <td style="vertical-align: top;">Mode number (l)</td>
+    </tr>
+     <tr>
+      <td style="vertical-align: top; text-align: center;">18-19</td>
+      <td style="vertical-align: top;">Type of distribution function (see Code <a href="grib2_table4-240.shtml">
+       Table 4.240</a>)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">20</td>
+      <td style="vertical-align: top;">Number of following function paramters (<b>N</B><sub>p</sub>), defined
+      by type given in octet 18-19 (Type of distribution function)</td>
+    </tr>
+    <tr>
+      <th style="text-align: center; background-color: lightgrey;"><br></th>
+      <th style="text-align: left; background-color: lightgrey;">21 &#8213;  Repeat the following 5 octets for the number of function parameters 
+      (n=1, N<sub>p</sub>), if N<sub>p</sub>>0</th>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">21+5(n-1)</td>
+      <td style="vertical-align: top;">List of scale factor of fixed distribution function parameter (p<sup>1</sup><b> - </b> p<sup>N</sup><sup>p</sup>), 
+      defined by type of distribution in octet 18-19</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(22+5(n-1))<b> - </b>(25+5(n-1))</td>
+      <td style="vertical-align: top;">List of scale value of fixed distribution function parameter (p<sup>1</sup><b> - </b> p<sup>N</sup><sup>p</sup>),
+      defined by type of distribution in octet 18-19</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">21+5N<sub>p</sub></td>
+      <td style="vertical-align: top;">Type of generting process (see Code <a href="grib2_table4-3.shtml">
+       Table 4.3</a>)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">22+5N<sub>p</sub></td>
+      <td style="vertical-align: top;">Background generting process identifier (defined by originating centre)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">23+5N<sub>p</sub></td>
+      <td style="vertical-align: top;">Analysis or forecast generating process identifier (defined by originating centre)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(24+5N<sub>p</sub>)<b> - </b>(25+5N<sub>p</sub>)</td>
+      <td style="vertical-align: top;">Hours of observational data cut-off after reference time (See Note 1)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">26+5N<sub>p</sub></td>
+      <td style="vertical-align: top;">Minutes of observational data cut-off after reference time</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">27+5N<sub>p</sub></td>
+      <td style="vertical-align: top;">Indicator of unit of time range (see Code <a href="grib2_table4-4.shtml">
+       Table 4.4</a>)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(28+5N<sub>p</sub>)<b> - </b>(31+5N<sub>p</sub>)</td>
+      <td style="vertical-align: top;">Forecast time in units defined by previous octet</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">32+5N<sub>p</sub></td>
+      <td style="vertical-align: top;">Type of first fixed surface (see Code <a href="grib2_table4-5.shtml">
+       Table 4.5</a>)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">33+5N<sub>p</sub></td>
+      <td style="vertical-align: top;">Scale factor of first fixed surface</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(34+5N<sub>p</sub>)<b> - </b>(37+5N<sub>p</sub>)</td>
+      <td style="vertical-align: top;">Scale value of first fixed surface</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">38+5N<sub>p</sub></td>
+      <td style="vertical-align: top;">Type of first second surface (see Code <a href="grib2_table4-5.shtml">
+       Table 4.5</a>)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">39+5N<sub>p</sub></td>
+      <td style="vertical-align: top;">Scale factor of second fixed surface</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(40+5N<sub>p</sub>)<b> - </b>(43+5N<sub>p</sub>)</td>
+      <td style="vertical-align: top;">Scale value of second fixed surface</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">44+5N<sub>p</sub></td>
+      <td style="vertical-align: top;">Type of Ensemble Forecast (see Code <a href="grib2_table4-6.shtml">
+       Table 4.6</a>)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">45+5N<sub>p</sub></td>
+      <td style="vertical-align: top;">Perturbation Number</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">46+5N<sub>p</sub></td>
+      <td style="vertical-align: top;">Number of Forecasts in Ensemble</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(47+5N<sub>p</sub>)<b> - </b>(48+5N<sub>p</sub>)</td>
+      <td style="vertical-align: top;">Year of time of end of overall time interval</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">49+5N<sub>p</sub></td>
+      <td style="vertical-align: top;">Month of time of end of overall time interval</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">50+5N<sub>p</sub></td>
+      <td style="vertical-align: top;">Day of time of end of overall time interval</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">51+5N<sub>p</sub></td>
+      <td style="vertical-align: top;">Hour of time of end of overall time interval</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">52+5N<sub>p</sub></td>
+      <td style="vertical-align: top;">Minute of time of end of overall time interval</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">53+5N<sub>p</sub></td>
+      <td style="vertical-align: top;">Second of time of end of overall time interval</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">54+5N<sub>p</sub></td>
+      <td style="vertical-align: top;"><b>n</b> – number of time range specifications describing the time intervals
+       used to calculate the statistically processed field</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(55+5N<sub>p</sub>)<b> - </b>(58+5N<sub>p</sub>)</td>
+      <td style="vertical-align: top;">Total number of data values missing in statistical process</td>
+    </tr>
+    <tr>
+      <th style="vertical-align: top; text-align: center; background-color: lightgrey;"></th>
+      <td style="vertical-align: top;"><b>(59+5N<sub>p</sub>)<b> - </b>(70+5N<sub>p</sub></b>) Specification of the outermost
+      (or only) time range over which statistical processing is done</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">59+5N<sub>p</sub></td>
+      <td style="vertical-align: top;">Statistical process used to calculate the processed
+      field from the field at each time increment during the time range
+      (see Code <a href="grib2_table4-10.shtml">Table 4.10</a>)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">60+5N<sub>p</sub></td>
+      <td style="vertical-align: top;">Type of time increment between successive fields used in the statistical processing
+      (see Code <a href="grib2_table4-11.shtml">Table 4.11</a>)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">61+5N<sub>p</sub></td>
+      <td style="vertical-align: top;">Indicator of unit of time for time range over which statistical processing is done
+      (see Code <a href="grib2_table4-4.shtml">Table 4.4</a>)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(62+5N<sub>p</sub>)<b> - </b>(65+5N<sub>p</sub>)</td>
+      <td style="vertical-align: top;">Length of the time range over which statistical processing is done,
+       in units defined by the previous octet</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">66+5N<sub>p</sub></td>
+      <td style="vertical-align: top;">Indicator of unit of time for the increment between the successive fields used
+      (see Code <a href="grib2_table4-4.shtml">Table 4.4</a>)</td>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(67+5N<sub>p</sub>)<b> - </b>(70+5N<sub>p</sub>)</td>
+      <td style="vertical-align: top;">Length of the time range over which statistical processing is done,
+       in units defined by the previous octet</td>
+    </tr>
+    <tr>
+      <th style="vertical-align: top; text-align: center; background-color: lightgrey;"></th>
+      <td style="vertical-align: top;"><b>(71+5N<sub>p</sub>) - nn</b> These octets are included only 
+      if n > 1, where nn = (58+5Np) + 12 x n</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(71+5N<sub>p</sub>)<b> - </b>(82+5N<sub>p</sub>)</td>
+      <td style="vertical-align: top;">As octets (59+5N<sub>p</sub>) to (70+5N<sub>p</sub>), next innermost step of processing</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(83+5N<sub>p</sub>)<b> - nn </b></td>
+      <td style="vertical-align: top;">Additional time range specifications, included in accordance with the value of
+      <b>n</b>. Contents as octets (59+5N<sub>p</sub>) to (70+5N<sub>p</sub>), repeated as necessary</td>
+    </tr>
+
+
+  </tbody>
+</table>
+</center>
+<br>
+<br>
+<table
+ style="margin-left: auto; margin-right: auto; width: 80%; text-align: left;"
+ border="0" cellpadding="2" cellspacing="2">
+<tbody>
+   <tr>
+    <tr>
+      <td style="vertical-align: top;"><b>Notes:</b><br><br>
+1. If Number of mode (N) > 1, then between X N fields with mode number I=1,...,N define the distribution function. X is number of variable 
+parameters in the distribution function.<br><br>
+2. For more information, see Part B, GRIB Attachment III.<br><br>
+3. Hours greater than 65534 will be coded as 65534.<br><br>
+4. The reference time in section 1 and the forecast time together define the beginning of the overall time interval.<br><br>
+5. An increment of zero means that the statistical processing is the result of a continuous (or near continuous) process, 
+not the processing of a number of discrete samples. Examples of such continuous processes are the temperatures measured 
+by analogue maximum and minimum thermometers or thermographs, and the rainfall measured by a rain gauge.<br><br>
+6. The reference and forecast times are successively set to their initial values plus or minus the increment, as defined 
+by the type of time increment. For all but the innermost (last) time range, the next inner range is then processed using
+these reference and forecast times as the initial reference and forecast times.<br><br>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<center><a href="/pmb/docs/grib2/grib2_doc/">Back</a></center>
+<br>
+</body>
+</html>

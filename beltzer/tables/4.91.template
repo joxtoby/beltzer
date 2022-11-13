@@ -1,0 +1,278 @@
+10	10	Parameter category (see Code table 4.1 )
+11	11	Parameter number (see Code table 4.2 )
+12	12	Type of generating process (see Code table 4.3 )
+13	13	Background generating process identifier (defined by originating centre)
+14	14	Analysis or forecast generating process identifier       (see Code ON388 Table A )
+15	16	Hours after reference time of data cutoff (see Note 1)
+17	17	Minutes after reference time of data cutoff
+18	18	Indicator of unit of time range       (see Code table 4.4 )
+19	22	Forecast time in units defined by octet 18 (see Note 2)
+23	23	Type of first fixed surface (see Code table 4.5 )
+24	24	Scale factor of first fixed surface	25-28	Scaled value of first fixed surface
+29	29	Type of second fixed surfaced (see Code table 4.5 )
+30	30	Scale factor of second fixed surface
+31	34	Scaled value of second fixed surfaces
+35	35	NC - Number of Categories
+(36+12(i	1))	Code figure
+(37+12(i	1))	Type of interval for first and second limit (see Code table 4.91 )
+(38+12(i	1))	Scale factor of first limit
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta name="Keywords" content="GRIB">
+  <title>GRIBv2 - Table 4.91</title>
+</head>
+<body style="color: rgb(0, 0, 0); background-color: white;"
+ alink="#ff0000" link="#0000ff" vlink="#551a8b">
+<br>
+<center>
+<h3>GRIB2 - PRODUCT DEFINITION TEMPLATE 4.91</h3>
+<h3><span style="color: blue;">Categorical forecasts at a horizontal level or in a horizontal<br>
+layer in a continuous or non continuous time interval</span></h3>
+<center><b><span style="font-size: 9pt;">Created 12/06/2011</span></b><br>
+</center>
+<br>
+<br>
+<center>
+<table style="width: 80%;" border="1" cellpadding="5" cellspacing="0">
+  <tbody>
+    <tr>
+      <th style="text-align: center; background-color: lightgrey;">Octet No.</th>
+      <th style="text-align: center; background-color: lightgrey;">Contents</th>
+    </tr>
+    <tr>
+      <td style="text-align: center;">10<br>
+      </td>
+      <td>Parameter category (see <a href="grib2_table4-1.shtml">Code
+table 4.1</a>)<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">11<br>
+      </td>
+      <td style="vertical-align: top;">Parameter number (see <a
+ href="grib2_table4-2.shtml">Code table
+4.2</a>)<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">12<br></td>
+      <td style="vertical-align: top;">Type of generating process (see
+      <a href="grib2_table4-3.shtml">Code table 4.3</a>)<br></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">13<br></td>
+      <td style="vertical-align: top;">Background generating process identifier (defined by originating centre)<br></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">14<br></td>
+      <td style="vertical-align: top;">Analysis or forecast generating process identifier
+      (see Code <a href="../../on388/tablea.html">ON388 Table A</a>)<br></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">15-16<br></td>
+      <td style="vertical-align: top;">Hours after reference time of data cutoff (see Note 1)<br></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">17<br></td>
+      <td style="vertical-align: top;">Minutes after reference time of data cutoff <br></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">18<br></td>
+      <td style="vertical-align: top;">Indicator of unit of time range
+      (see <a href="grib2_table4-4.shtml">Code table 4.4</a>)<br></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">19-22<br></td>
+      <td style="vertical-align: top;">Forecast time in units defined by octet 18 (see Note 2)<br></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">23<br></td>
+      <td style="vertical-align: top;">Type of first fixed surface (see <a href="grib2_table4-5.shtml">Code table 4.5</a>)<br></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">24<br></td>
+      <td style="vertical-align: top;">Scale factor of first fixed surface</td>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">25-28<br></td>
+      <td style="vertical-align: top;">Scaled value of first fixed surface<br></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">29<br></td>
+      <td style="vertical-align: top;">Type of second fixed surfaced (see <a href="grib2_table4-5.shtml">Code table 4.5</a>)<br></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">30<br></td>
+      <td style="vertical-align: top;">Scale factor of second fixed surface<br></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">31-34<br></td>
+      <td style="vertical-align: top;">Scaled value of second fixed surfaces<br></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">35</td>
+      <td style="vertical-align: top;"><b>NC</b> - Number of Categories</td>
+    </tr>
+    <tr>
+      <th style="text-align: center; background-color: lightgrey;"><br></th>
+      <th style="text-align: left; background-color: lightgrey;"><b>36 &#8213; Repeat the following 12 octets for
+      each category (i=1,NC)</b></th>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(36+12(i-1))<br></td>
+      <td style="vertical-align: top;">Code figure<br></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(37+12(i-1))<br></td>
+      <td style="vertical-align: top;">Type of interval for first and second limit (see <a href="grib2_table4-91.shtml">Code table 4.91</a>)<br></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(38+12(i-1))<br></td>
+      <td style="vertical-align: top;">Scale factor of first limit</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(39+12(i-1)) - (42+12(i-1))<br></td>
+      <td style="vertical-align: top;">Scale value of first limit</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(43+12(i-1))<br></td>
+      <td style="vertical-align: top;">Scale factor of second limit</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(44+12(i-1)) - (47+12(i-1))<br></td>
+      <td style="vertical-align: top;">Scale value of second limit</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(48+12(NC-1)) - (49+12(NC-1))<br></td>
+      <td style="vertical-align: top;">Year of end of overall time interval<br></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(50+12(NC-1))<br></td>
+      <td style="vertical-align: top;">Month of end of overall time interval<br></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(51+12(NC-1))<br></td>
+      <td style="vertical-align: top;">Day of end of overall time interval<br></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(52+12(NC-1))<br></td>
+      <td style="vertical-align: top;">Hour of end of overall time interval<br></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(53+12(NC-1))<br></td>
+      <td style="vertical-align: top;">Minute of end overall time interval</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(54+12(NC-1))<br></td>
+      <td style="vertical-align: top;">Second of end of overall time interval<br></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(55+12(NC-1))<br></td>
+      <td style="vertical-align: top;">n &#8213; number of time range
+specifications describing the time intervals used to calculate the
+statistically-processed field </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(56+12(NC-1))-(59+12(NC-1))<br></td>
+      <td style="vertical-align: top;">Total number of data values missing in the statistical process</td>
+    </tr>
+    <tr>
+      <th style="text-align: center; background-color: lightgrey;"><br></th>
+      <th style="text-align: center; background-color: lightgrey;"><b>60 - 71 &#8213; Specification of the outermost (or only)
+       time range over which statistical processing is done</b></th>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(60+12(NC-1))<br></td>
+      <td style="vertical-align: top;">Statistical process used to
+calculate the processed field from the field at each time increment
+during the time range <br>
+(see Code <a href="grib2_table4-10.shtml">Table 4.10</a>)<br></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(61+12(NC-1))<br></td>
+      <td style="vertical-align: top;">Type of time increment between
+successive fields used in the statistical processing (see Code <a href="grib2_table4-11.shtml">Table
+4.11</a>) </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(62+12(NC-1))<br></td>
+      <td style="vertical-align: top;">Indicator of unit of time range
+over which statistical processing is done (see Code <a href="grib2_table4-4.shtml">Table 4.4</a>)<br></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(63+12(NC-1))-(66+12(NC-1))<br></td>
+      <td style="vertical-align: top;"> Length of the time range over
+which statistical processing is done, in units defined by the previous octet<br></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(67+12(NC-1))<br></td>
+      <td style="vertical-align: top;">Indicator of unit of time for
+the increment between the successive fields used (see Code <a
+ href="grib2_table4-4.shtml">Table 4.4</a>) <br></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(68+12(NC-1))-(71+12(NC-1))<br></td>
+      <td style="vertical-align: top;">Time increment between
+successive fields, in units defined by the previous octet (see Note 3)</td>
+    </tr>
+    <tr>
+      <th style="text-align: center; background-color: lightgrey;"><br></th>
+      <th style="text-align: center; background-color: lightgrey;"><b>72 - nn &#8213; These octets are included only if 
+      n&gt;1, where nn = 72+12(n-1)+12x(NC-1)
+       </b></th>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(72+12(NC-1))-(83+12(NC-1))<br></td>
+      <td style="vertical-align: top;">As octets 60 to 71, next innermost step of processing<br></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">84+12(NC-1)-nn<br></td>
+      <td style="vertical-align: top;">Additional time range
+specifications, included in accordance with the value of n,
+Contents as octets 50 to 61, repeated as necessary.<br></td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<br>
+<br>
+<table
+ style="margin-left: auto; margin-right: auto; width: 80%; text-align: left;"
+ border="0" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"><b>Notes:</b><br><br>
+(1)  Hours greater than
+65534 will be coded as 65534.<br>
+      <br>
+(2) The reference time in section 1 and the forecast
+time together define the beginning of the overall time interval.<br>
+      <br>
+(3) An increment of zero means that the statistical
+processing the result of continuous (or near continuous) process, not
+the<br>
+ processing of a number of
+discrete samples. Examples of such continuous process are the
+temperatures measured by<br>
+ analogue maximum and
+minimum thermometers or thermographs and the rainfall measured by a
+rain guage. The reference and forecast
+times are successively set to their initial values plus or minus the
+increment, as defined by the type
+of time increment (one of octets (60+12(NC-1)), (73+12(NC-1)), (85+12(NC-1))...) For all but
+the innermost (last) time range, the next inner range is then precessed using these
+reference and forecast times as the initial reference and forecast time.<br>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+<br>
+<br>
+<center><a href="/pmb/docs/grib2/grib2_doc/">Back</a></center>
+<br>
+<br>
+</body>
+</html>

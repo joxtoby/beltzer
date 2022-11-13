@@ -1,0 +1,22 @@
+10	10	Parameter category (see Code Table 4.1 )
+11	11	Parameter number (see Code Table 4.2 )
+12	12	Type of generating process (see Code Table 4.3 )
+13	13	Background generating process identifier (defined by originating centre)
+14	14	Analysis or forecast generating process identifier       (see Code ON388 Table A )
+15	16	Hours of observational data cutoff after reference time (see Note 1)
+17	17	Minutes of observational data cutoff after reference time
+18	18	Indicator of unit of time range (see Code Table 4.4 )
+19	22	Forecast time in units defined by octet 18 (see Note 2)
+23	23	Type of first fixed surface (see Code Table 4.5 )
+24	24	Scale factor of first fixed surface
+25	28	Scaled value of first fixed surface
+29	29	Type of second fixed surface (see Code Table 4.5 )
+30	30	Scale factor of second fixed surface
+31	34	Scaled value of second fixed surface
+35	38	Total number of data values missing in the statistical process
+39	39	Statistical process used to calculate the processed field from the field at each time increment during the time range (see Code Table 4.10 )
+40	40	Type of time increment between successive fields used in the statistical processing (see Code Table 4.11 )
+41	41	Indicator of unit of time for time range over which processing is dome (see Code Table 4.4 )
+42	45	Length of the time range over which statistical processing is done, in units defined by the previous octet
+46	46	Indicator of unit of time for increment between the successive fields used (see Code Table 4.4 )
+47	50	Time increment between successive fields, in units defined by the previous octet (see Note 3)

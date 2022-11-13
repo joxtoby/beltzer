@@ -1,0 +1,5 @@
+10	10	Parameter category (see Code Table 4.1 )
+11	11	Parameter number (see Code Table 4.2 )
+12	12	Type of generating process (see Code Table 4.3 )
+13	13	Observation generating process identifier (defined by originating centres)
+14	14	Number of contributing spectral bands (NB)

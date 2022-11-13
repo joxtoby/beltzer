@@ -1,0 +1,1 @@
+Note: The disciplines are given in Section 0, Octet 7 of the GRIB2 message and are defined in Table 0.0 .	Note: The disciplines are given in Section 0, Octet 7 of the GRIB2 message and are defined in Table 0.0 .	When a new category is to be added to Code table 4.1 and more than one discipline applies, the choice of discipline should be made based on the intended use of product.

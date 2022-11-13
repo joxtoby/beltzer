@@ -1,0 +1,32 @@
+10	10	Parameter category (see Code Table 4.1 )
+11	11	Parameter number (see Code Table 4.2 )
+12	12	Type of generating process (see Code Table 4.3 )
+13	13	Background generating process identifier (defined by originating centre)
+14	14	Forecast generating process identified       (see Code ON388 Table A )
+15	16	Hours after reference time data cutoff (see Note)
+17	17	Minutes after reference time data cutoff
+18	18	Indicator of unit of time range (see Code Table 4.4 )
+19	22	Forecast time in units defined by octet 18
+23	23	Type of first fixed surface (see Code Table 4.5 )
+24	24	Scale factor of first fixed surface
+25	28	Scaled value of first fixed surface
+29	29	Type of second fixed surfaced (see Code Table 4.5 )
+30	30	Scale factor of second fixed surface
+31	34	Scaled value of second fixed surfaces
+35	35	Derived forecast (see Code Table 4.7 )
+36	36	Number of forecasts in the ensemble (N)
+37	37	Cluster identifier
+38	38	Number of cluster to which the high resolution control belongs
+39	39	Number of cluster to which the low resolution control belongs
+40	40	Total number of clusters
+41	41	Clustering method (see Code Table 4.8 )
+42	45	Northern latitude of cluster domain
+46	49	Southern latitude of cluster domain
+50	53	Eastern longitude of cluster domain
+54	57	Western longitude of cluster domain
+58	58	N c - number of forecasts in the cluster
+59	59	Scale factor of standard deviation in the cluster
+60	63	Scaled value of standard deviation in the cluster
+64	64	Scale factor of distance of the cluster from ensemble mean
+65	68	Scaled value of distance of the cluster from ensemble mean
+69	(68+ N c )	List of N c ensemble forecast numbers ( N c is given in octet 58)

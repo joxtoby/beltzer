@@ -1,0 +1,7 @@
+0	0	No thunderstorm occurrence
+1	1	Weak thunderstorm
+2	2	Moderate thunderstorm
+3	3	Severe thunderstorm
+4	191	Reserved
+192	254	Reserved for Local Use
+255	255	Missing

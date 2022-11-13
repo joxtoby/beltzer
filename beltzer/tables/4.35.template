@@ -1,0 +1,103 @@
+10	10	Parameter category (see Code Table 4.1 )
+11	11	Parameter number (see Code Table 4.2 )
+12	12	Type of generating process (see Code Table 4.3 )
+13	13	Observation generating process identifier (defined by originating centres)
+14	14	Quality value associated with parameter (see Code Table 4.16 )
+15	15	Number of contributing spectral bands (NB)
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta name="Keywords" content="GRIB">
+  <title>GRIBv2 - Table 4.35</title>
+</head>
+<body style="color: rgb(0, 0, 0); background-color: white;"
+ alink="#ff0000" link="#0000ff" vlink="#551a8b">
+<br>
+<center>
+<h3>GRIB2 - PRODUCT DEFINITION TEMPLATE 4.35</h3>
+<h3><span style="color: blue;">Satellite Product With or Without Associated Quality Values</span></h3>
+<center><b><span style="font-size: 9pt;">Created 07/09/2018<br>
+</center>
+<br>
+<br>
+<center>
+<table style="width: 80%;" border="1" cellpadding="5" cellspacing="0">
+  <tbody>
+    <tr>
+      <th style="text-align: center; background-color: lightgrey;">Octet No.</th>
+      <th style="text-align: center; background-color: lightgrey;">Contents</th>
+    </tr>
+    <tr>
+      <td style="text-align: center;">10<br></td>
+      <td>Parameter category (see Code <a href="grib2_table4-1.shtml">Table 4.1</a>)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">11<br></td>
+      <td style="vertical-align: top;">Parameter number (see Code <a href="grib2_table4-2.shtml">Table 4.2</a>) </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">12<br></td>
+      <td style="vertical-align: top;">Type of generating process (see Code <a href="grib2_table4-3.shtml">Table 4.3</a>)<br> </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">13<br></td>
+      <td style="vertical-align: top;">Observation generating process identifier (defined by originating centres)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">14<br></td>
+      <td style="vertical-align: top;">Quality value associated with parameter (see Code <a href="grib2_table4-16.shtml">Table 4.16</a>)<br> </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">15<br></td>
+      <td style="vertical-align: top;">Number of contributing spectral bands (NB)</td>
+    </tr>
+    <tr>
+      <th style="vertical-align: top; text-align: center; background-color: lightgrey;"></th>
+      <td style="vertical-align: top;"><b> 16 - Repeat the following 11 octets for each contributing band (nb = 1,NB), if NB >0 </b></td>
+    </tr>
+    <tr>
+      <td>(16+11(nb-1))&mdash;(17+11(nb-1))</td>
+      <td>Satellite series of band nb (<span> code table defined by originating/generating centre</span>)</td>
+    </tr>
+    <tr>
+      <td>(18+11(nb-1))&mdash;(19+11(nb-1))</td>
+      <td>Satellite number of band nb (<span>code table defined by originating/generating centre</span>)</td>
+    </tr>
+    <tr>
+      <td>(20+11(nb-1))&mdash;(21+11(nb-1))</td>
+      <td>Instrument types of band nb (<span>code table defined by originating/generating centre</span>)</td>
+    </tr>
+    <tr>
+      <td>(22 +11(nb-1))</td>
+      <td>Scale factor of central wave number of band nb</td>
+    </tr>
+    <tr>
+      <td>(23+11(nb-1))&mdash;(26+11(nb-1))</td>
+      <td>Scaled value of central wave number of band nb (units: m<sup>-1</sup>)</td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<br>
+<br>
+<table
+ style="margin-left: auto; margin-right: auto; width: 80%; text-align: left;"
+ border="0" cellpadding="2" cellspacing="2">
+<tbody>
+    <tr>
+      <td style="vertical-align: top;"><b>Note</b> :<br><br>
+      <span>
+      For “satellite series of band nb”, “satellite numbers of band nb” and “instrument types of band nb”,<br>
+      it is recommended to encode the values as per BUFR Code tables 0 02 020, 0 01 007 (Common Code table C–5) <br>
+      and 0 02 019 (Common Code table C–8), respectively.
+    </span>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<center><a href="/pmb/docs/grib2/grib2_doc/">Back</a></center>
+<br>
+<br>
+</body>
+</html>

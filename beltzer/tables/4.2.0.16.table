@@ -1,0 +1,16 @@
+0	0	Equivalent radar reflectivity factor for rain	m m 6 m -3	REFZR
+1	1	Equivalent radar reflectivity factor for snow	m m 6 m -3	REFZI
+2	2	Equivalent radar reflectivity factor for parameterized convection	m m 6 m -3	REFZC
+3	3	Echo Top    (See Note 1)	m	RETOP
+4	4	Reflectivity	dB	REFD
+5	5	Composite reflectivity	dB	REFC
+6 	191	Reserved
+192	192	Equivalent radar reflectivity factor for rain	m m 6 m -3	REFZR
+193	193	Equivalent radar reflectivity factor for snow	m m 6 m -3	REFZI
+194	194	Equivalent radar reflectivity factor for parameterized convection	m m 6 m -3	REFZC
+195	195	Reflectivity	dB	REFD
+196	196	Composite reflectivity	dB	REFC
+197	197	Echo Top    (See Note 1)	m	RETOP
+198	198	Hourly Maximum of Simulated Reflectivity	dB	MAXREF
+199	254	Reserved for Local Use
+255	255	Missing

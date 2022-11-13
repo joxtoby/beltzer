@@ -1,0 +1,17 @@
+0	0	Minute
+1	1	Hour
+2	2	Day
+3	3	Month
+4	4	Year
+5	5	Decade (10 Years)
+6	6	Normal (30 Years)
+7	7	Century (100 Years)
+8	8	Reserved
+9	9	Reserved
+10	10	3 Hours
+11	11	6 Hours
+12	12	12 Hours
+13	13	Second
+14	191	Reserved
+192	254	Reserved for Local Use
+255	255	Missing

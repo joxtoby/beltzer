@@ -1,0 +1,5 @@
+0	0	Aerosol not present
+1	1	Aerosol present
+2	191	Reserved
+192	254	Reserved for Local Use
+255	255	Missing

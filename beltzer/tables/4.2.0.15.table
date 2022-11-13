@@ -1,0 +1,20 @@
+0	0	Base Spectrum Width	m s -1	BSWID
+1	1	Base Reflectivity	dB	BREF
+2	2	Base Radial Velocity	m s -1	BRVEL
+3	3	Vertically-Integrated Liquid Water	kg m -2	VIL
+4	4	Layer Maximum Base Reflectivity	dB	LMAXBR
+5	5	Precipitation	kg m -2	PREC
+6	6	Radar Spectra (1)		RDSP1
+7	7	Radar Spectra (2)		RDSP2
+8	8	Radar Spectra (3)		RDSP3
+9	9	Reflectivity of Cloud Droplets	dB	RFCD
+10	10	Reflectivity of Cloud Ice	dB	RFCI
+11	11	Reflectivity of Snow	dB	RFSNOW
+12	12	Reflectivity of Rain	dB	RFRAIN
+13	13	Reflectivity of Graupel	dB	RFGRPL
+14	14	Reflectivity of Hail	dB	RFHAIL
+15	15	Hybrid Scan Reflectivity	dB	HSR
+16	16	Hybrid Scan Reflectivity Height	m	HSRHT
+17 	191	Reserved		
+192	254	Reserved for Local Use		
+255	255	Missing		

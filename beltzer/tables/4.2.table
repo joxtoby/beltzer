@@ -1,0 +1,20 @@
+Product        Discipline 0 	 Meteorological products	
+Parameter Category 0	Parameter Category 0	Temperature
+Parameter Category 1	Parameter Category 1	Moisture
+Parameter Category 2	Parameter Category 2	Momentum
+Parameter Category 3	Parameter Category 3	Mass
+Parameter Category 4	Parameter Category 4	Short wave radiation
+Parameter Category 5	Parameter Category 5	Long wave radiation
+Parameter Category 6	Parameter Category 6	Cloud
+Parameter Category 7	Parameter Category 7	Thermodynamic stability indices
+Parameter Category 13	Parameter Category 13	Aerosols
+Parameter Category 14	Parameter Category 14	Trace gases (e.g. Ozone, CO 2 )
+Parameter Category 15	Parameter Category 15	Radar
+Parameter Category 16	Parameter Category 16	Forecast Radar Imagery
+Parameter Category 17	Parameter Category 17	Electrodynamics
+Parameter Category 18	Parameter Category 18	Nuclear/radiology
+Parameter Category 19	Parameter Category 19	Physical atmospheric Properties
+Parameter Category 20	Parameter Category 20	Atmospheric Chemical Constituents
+21 	189	Reserved
+Parameter Category 190	Parameter Category 190	CCITT IA5 string
+Parameter Category 191	Parameter Category 191	Miscellaneous

@@ -1,0 +1,10 @@
+0	0	Lightning Strike Density	m -2 s -1	LTNGSD
+1	1	Lightning Potential Index (LPI) (see Note 1)	J kg -1	LTPINX
+2	2	Cloud-to-Ground Lightning Flash Density	km -2 day -1	CDGDLTFD
+3	3	Cloud-to-Cloud Lightning Flash Density	km -2 day -1	CDCDLTFD
+4	4	Total Lightning Flash Density (see Note 2)	km -2 day -1	TLGTFD
+5	5	Subgrid-scale lightning potential index (see Note 3)	J kg -1	SLNGPIDX
+6 	191	Reserved		
+192	192	Lightning	non-dim	LTNG
+193	254	Reserved for Local Use
+255	255	Missing		

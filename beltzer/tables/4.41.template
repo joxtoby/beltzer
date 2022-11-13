@@ -1,0 +1,19 @@
+10	10	Parameter category (see Code table 4.1 )
+11	11	Parameter number (see Code table 4.2 )
+12	13	Atmospheric Chemical Constituent Type (see Code table 4.230 )
+14	14	Type of generating process (see Code table 4.3 )
+15	15	Background generating process identifier (defined by originating centre)
+16	16	Forecast generating process identifier       (see Code ON388 Table A )
+17	18	Hours after reference time data cutoff (see Note)
+19	19	Minutes after reference time data cutoff (see Note)
+20	20	Indicator of unit of time range (see Code table 4.4 )
+21	24	Forecast time in units defined by octet 20
+25	25	Type of first fixed surface (see Code table 4.5 )
+26	26	Scale factor of first fixed surface
+27	30	Scaled value of first fixed surface
+31	31	Type of second fixed surfaced (see Code table 4.5 )
+32	32	Scale factor of second fixed surface
+33	36	Scaled value of second fixed surfaces
+37	37	Type of ensemble forecast (see Code table 4.6 )
+38	38	Perturbation number
+39	39	Number of forecasts in ensemble

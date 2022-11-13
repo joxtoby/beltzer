@@ -1,0 +1,159 @@
+10	10	Parameter category (see Code Table 4.1 )
+11	11	Parameter number (see Code Table 4.2 )
+12	13	Atmospheric Chemical Constituent Type (see Code table 4.230 )
+14	15	Number of mode (N) of distribution (See Note 1)
+16	17	Mode number (l)
+18	19	Type of distribution function (see Code Table 4.240 )
+20	20	Number of following function paramters ( N p ), defined       by type given in octet 18-19 (Type of distribution function)
+21+5(n	1)	List of scale factor of fixed distribution function parameter (p 1 - p N p ), defined by type of distribution in octet 18-19
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta name="Keywords" content="GRIB">
+  <title>GRIBv2 - Table 4.57</title>
+</head>
+<body style="color: rgb(0, 0, 0); background-color: white;"
+ alink="#ff0000" link="#0000ff" vlink="#551a8b">
+<center>
+<h3>GRIB2 - PRODUCT DEFINITION TEMPLATE 4.57</h3>
+<h3><span style="color: blue;">Analysis or Forecast at a horizontal level or in a horizontal layer at a point<br>
+in time for atmospheric chemical constituents based on a distribution function</span></h3>
+<center><b><span style="font-size: 9pt;">Created 08/24/2015</span></b><br>
+</center>
+<br>
+<br>
+<center>
+<table style="width: 80%;" border="1" cellpadding="5" cellspacing="0">
+  <tbody>
+    <tr>
+      <th style="text-align: center; background-color: lightgrey;">Octet No.</th>
+      <th style="text-align: center; background-color: lightgrey;">Contents</th>
+    </tr>
+    <tr>
+      <td style="text-align: center;">10<br>
+      </td>
+      <td>Parameter category (see Code <a href="grib2_table4-1.shtml">Table 4.1</a>)<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">11<br>
+      </td>
+      <td style="vertical-align: top;">Parameter number (see Code <a href="grib2_table4-2.shtml">Table 4.2</a>)<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">12-13<br></td>
+      <td style="vertical-align: top;">Atmospheric Chemical Constituent Type (see
+      <a href="grib2_table4-230.shtml">Code table 4.230</a>)<br></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">14-15</td>
+      <td style="vertical-align: top;">Number of mode (N) of distribution (See Note 1)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">16-17</td>
+      <td style="vertical-align: top;">Mode number (l)</td>
+    </tr>
+     <tr>
+      <td style="vertical-align: top; text-align: center;">18-19</td>
+      <td style="vertical-align: top;">Type of distribution function (see Code <a href="grib2_table4-240.shtml">
+       Table 4.240</a>)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">20</td>
+      <td style="vertical-align: top;">Number of following function paramters (<b>N<sub>p</sub></b>), defined
+      by type given in octet 18-19 (Type of distribution function)</td>
+    </tr>
+    <tr>
+      <th style="vertical-align: top; text-align: center; background-color: lightgrey;"></th>
+      <td style="vertical-align: top;"><b> 21 - Repeat the following 5 octets for the number of function parameters (n=1, N<sub>p</sub>), if N<sub>p</sub>>0</b></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">21+5(n-1)</td>
+      <td style="vertical-align: top;">List of scale factor of fixed distribution function parameter (p<sub>1</sub>- p<sub>N<sub>p</sub></sub>), defined by type of distribution in octet 18-19</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(22+5(n-1))<b> - </b>(25+5(n-1))</td>
+      <td style="vertical-align: top;">List of scale value of fixed distribution function parameter (p<sub>1</sub>- p<sub>N<sub>p</sub></sub>), defined by type of distribution in octet 18-19</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">21+5N<sub>p</sub></td>
+      <td style="vertical-align: top;">Type of generting process (see Code <a href="grib2_table4-3.shtml">
+       Table 4.3</a>)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">22+5N<sub>p</sub></td>
+      <td style="vertical-align: top;">Background generting process identifier (defined by originating centre)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">23+5N<sub>p</sub></td>
+      <td style="vertical-align: top;">Analysis or forecast generating process identifier (defined by originating centre)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(24+5N<sub>p</sub>)<b> - </b>(25+5N<sub>p</sub>)</td>
+      <td style="vertical-align: top;">Hours of observational data cut-off after reference time (See Note 2)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">26+5N<sub>p</sub></td>
+      <td style="vertical-align: top;">Minutes of observational data cut-off after reference time</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">27+5N<sub>p</sub></td>
+      <td style="vertical-align: top;">Indicator of unit of time range (see Code <a href="grib2_table4-4.shtml">
+       Table 4.4</a>)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(28+5N<sub>p</sub>)<b> - </b>(31+5N<sub>p</sub>)</td>
+      <td style="vertical-align: top;">Forecast time in units defined by previous octet</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">32+5N<sub>p</sub></td>
+      <td style="vertical-align: top;">Type of first fixed surface (see Code <a href="grib2_table4-5.shtml">
+       Table 4.5</a>)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">33+5N<sub>p</sub></td>
+      <td style="vertical-align: top;">Scale factor of first fixed surface</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(34+5N<sub>p</sub>)<b> - </b>(37+5N<sub>p</sub>)</td>
+      <td style="vertical-align: top;">Scale value of first fixed surface</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">38+5N<sub>p</sub></td>
+      <td style="vertical-align: top;">Type of first second surface (see Code <a href="grib2_table4-5.shtml">
+       Table 4.5</a>)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">39+5N<sub>p</sub></td>
+      <td style="vertical-align: top;">Scale factor of second fixed surface</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(40+5N<sub>p</sub>)<b> - </b>(43+5N<sub>p</sub>)</td>
+      <td style="vertical-align: top;">Scale value of second fixed surface</td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<br>
+<br>
+<table
+ style="margin-left: auto; margin-right: auto; width: 80%; text-align: left;"
+ border="0" cellpadding="2" cellspacing="2">
+<tbody>
+   <tr>
+    <tr>
+      <td style="vertical-align: top;"><b>Notes:</b><br><br>
+1. If Number of mode (N) > 1, then between x N fields with mode number I=1,...,N define the distribution function. x is number of variable 
+parameters in the distribution function. <br><br>
+2. Hours greater than 65534 will be coded as 65534<br><br>
+3. For more information, see Part B, GRIB Attachment III.<br>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<center><a href="/pmb/docs/grib2/grib2_doc/">Back</a></center>
+<br>
+</body>
+</html>

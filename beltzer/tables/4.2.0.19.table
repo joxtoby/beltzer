@@ -1,0 +1,84 @@
+0	0	Visibility	m	VIS
+1	1	Albedo	%	ALBDO
+2	2	Thunderstorm Probability	%	TSTM
+3	3	Mixed Layer Depth	m	MIXHT
+4	4	Volcanic Ash	See Table 4.206	VOLASH
+5	5	Icing Top	m	ICIT
+6	6	Icing Base	m	ICIB
+7	7	Icing	See Table 4.207	ICI
+8	8	Turbulence Top	m	TURBT
+9	9	Turbulence Base	m	TURBB
+10	10	Turbulence	See Table 4.208	TURB
+11	11	Turbulent Kinetic Energy	J kg -1	TKE
+12	12	Planetary Boundary Layer Regime	See Table 4.209	PBLREG
+13	13	Contrail Intensity	See Table 4.210	CONTI
+14	14	Contrail Engine Type	See Table 4.211	CONTET
+15	15	Contrail Top	m	CONTT
+16	16	Contrail Base	m	CONTB
+17	17	Maximum Snow Albedo see Note 1	%	MXSALB
+18	18	Snow-Free Albedo	%	SNFALB
+19	19	Snow Albedo	%	SALBD
+20	20	Icing	%	ICIP
+21	21	In-Cloud Turbulence	%	CTP
+22	22	Clear Air Turbulence (CAT)	%	CAT
+23	23	Supercooled Large Droplet       Probability see Note 2	%	SLDP
+24	24	Convective Turbulent Kinetic Energy	J kg -1	CONTKE
+25	25	Weather	See Table 4.225	WIWW
+26	26	Convective Outlook	See Table 4.224	CONVO
+27	27	Icing Scenario	See Table 4.227	ICESC
+28	28	Mountain Wave Turbulence (Eddy Dissipation Rate)	m 2/3 s -1	MWTURB
+29	29	Clear Air Turbulence (CAT) (Eddy Dissipation Rate)	m 2/3 s -1	CATEDR
+30	30	Eddy Dissipation Parameter (See Note 3)	m 2/3 s -1	EDPARM
+31	31	Maximum of Eddy Dissipation Parameter in Layer	m 2/3 s -1	MXEDPRM
+32	32	Highest Freezing Level	m	HIFREL
+33	33	Visibility Through Liquid Fog	m	VISLFOG
+34	34	Visibility Through Ice Fog	m	VISIFOG
+35	35	Visibility Through Blowing Snow	m	VISBSN
+36	36	Presence of Snow Squalls	See Table 4.222	PSNOWS
+37	37	Icing Severity	See Table 4.228	ICESEV
+38	38	Sky transparency index (see Note 4)	See Table 4.214	SKYIDX
+39	39	Seeing index (see Note 5)	See Table 4.214	SEEINDEX
+40	40	Snow level	m	SNOWLVL
+41 	191	Reserved		
+192	192	Maximum Snow Albedo	%	MXSALB
+193	193	Snow-Free Albedo	%	SNFALB
+194	194	Slight risk convective outlook	categorical	SRCONO
+195	195	Moderate risk convective outlook	categorical	MRCONO
+196	196	High risk convective outlook	categorical	HRCONO
+197	197	Tornado probability	%	TORPROB
+198	198	Hail probability	%	HAILPROB
+199	199	Wind probability	%	WINDPROB
+200	200	Significant Tornado probability	%	STORPROB
+201	201	Significant Hail probability	%	SHAILPRO
+202	202	Significant Wind probability	%	SWINDPRO
+203	203	Categorical Thunderstorm	Code table 4.222	TSTMC
+204	204	Number of mixed layers next to surface	integer	MIXLY
+205	205	Flight Category		FLGHT
+206	206	Confidence - Ceiling		CICEL
+207	207	Confidence - Visibility		CIVIS
+208	208	Confidence - Flight Category		CIFLT
+209	209	Low-Level aviation interest		LAVNI
+210	210	High-Level aviation interest		HAVNI
+211	211	Visible, Black Sky Albedo	%	SBSALB
+212	212	Visible, White Sky Albedo	%	SWSALB
+213	213	Near IR, Black Sky Albedo	%	NBSALB
+214	214	Near IR, White Sky Albedo	%	NWSALB
+215	215	Total Probability of Severe Thunderstorms (Days 2,3)	%	PRSVR
+216	216	Total Probability of Extreme Severe Thunderstorms (Days 2,3)	%	PRSIGSVR
+217	217	Supercooled Large Droplet (SLD) Icing see Note 2	See Table 4.207	SIPD
+218	218	Radiative emissivity		EPSR
+219	219	Turbulence Potential Forecast Index		TPFI
+220	220	Categorical Severe Thunderstorm	Code table 4.222	SVRTS
+221	221	Probability of Convection	%	PROCON
+222	222	Convection Potential	Code table 4.222	CONVP
+223	231	Reserved		
+232	232	Volcanic Ash Forecast Transport and Dispersion	log10 (kg m -3 )	VAFTD
+233	233	Icing probability	non-dim	ICPRB
+234	234	Icing Severity	non-dim	ICSEV
+235	235	Joint Fire Weather Probability	%	JFWPRB
+236	236	Snow Level	m	SNOWLVL
+237	237	Dry Thunderstorm Probability	%	DRYTPROB
+238	238	Ellrod Index		ELLINX
+239	239	Craven-Wiedenfeld Aggregate Severe Parameter	Numeric	CWASP
+240	254	Reserved for Local Use
+255	255	Missing		

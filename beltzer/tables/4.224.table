@@ -1,0 +1,18 @@
+0	0	No Risk Area
+1	1	Reserved
+2	2	General Thunderstorm Risk Area
+3	3	Reserved
+4	4	Slight Risk Area
+5	5	Reserved
+6	6	Moderate Risk Area
+7	7	Reserved
+8	8	High Risk Area
+9	10	Reserved
+11	11	Dry Thunderstorm (Dry Lightning) Risk Area
+12	13	Reserved
+14	14	Critical Risk Area
+15	17	Reserved
+18	18	Extreamly Critical Risk Area
+19	191	Reserved
+192	254	Reserved for Local Use
+255	255	Missing

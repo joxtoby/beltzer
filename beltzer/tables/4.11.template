@@ -1,0 +1,34 @@
+10	10	Parameter category (see Code Table 4.1 )
+11	11	Parameter number (see Code Table 4.2 )
+12	12	Type of generating process (see Code Table 4.3 )
+13	13	Background generating process identifier (defined by originating centre)
+14	14	Forecast generating process identifier       (see Code ON388 Table A )
+15	16	Hours after reference time data cutoff (see Note 1)
+17	17	Minutes after reference time data cutoff
+18	18	Indicator of unit of time range (see Code Table 4.4 )
+19	22	Forecast time in units defined by octet 18 (see Note 2)
+23	23	Type of first fixed surface (see Code Table 4.5 )
+24	24	Scale factor of first fixed surface
+25	28	Scaled value of first fixed surface
+29	29	Type of second fixed surfaced (see Code Table 4.5 )
+30	30	Scale factor of second fixed surface
+31	34	Scaled value of second fixed surfaces
+35	35	Type of ensemble forecast (see Code Table 4.6 )
+36	36	Perturbation number
+37	37	Number of forecasts in ensemble
+38	39	Year of end of overall time interval
+40	40	Month of end of overall time interval
+41	41	Day of end of overall time interval
+42	42	Hour of end of overall time interval
+43	43	Minute of end overall time interval
+44	44	Second of end of overall time interval
+45	45	n ― number of time ranges specifications describing the time intervals used to calculate the statistically-processed field
+46	49	Total number of data values missing in the statistical process
+50	50	Statistical process used to calculate the processed field from the field at each time increment during the time range (see Code Table 4.10 )
+51	51	Type of time increment between successive fields used in the statistical processing (see Code Table 4.11 )
+52	52	Indicator of unit of time range over which statistical processing is done (see Code Table 4.4 )
+53	56	Length of the time range over which statistical processing is done, in units defined by the previous octet
+57	57	Indicator of unit of time for the increment between the successive fields used (see Code Table 4.4 )
+58	61	Time increment between successive fields, in units defined by the previous octet (see Note 3)
+62	73	As octets 50 to 61, next innermost step of processing
+74	nn	Additional time range specifications, included in accordance with the value of n, Contents as octets 50 to 61, repeated as necessary.

@@ -1,0 +1,26 @@
+0	0	Unweighted Mean of All Members
+1	1	Weighted Mean of All Members
+2	2	Standard Deviation with respect to Cluster Mean
+3	3	Standard Deviation with respect to Cluster Mean, Normalized
+4	4	Spread of All Members
+5	5	Large Anomaly Index of All Members (see Note 1)
+6	6	Unweighted Mean of the Cluster Members
+7	7	Interquartile Range (Range between the 25th and 75th quantile)
+8	8	Minimum Of All Ensemble Members (see Note 2)
+9	9	Maximum Of All Ensemble Members (see Note 2)
+10	191	Reserved
+192	192	Unweighted Mode of All Members
+193	193	Percentile value (10%) of All Members
+194	194	Percentile value (50%) of All Members
+195	195	Percentile value (90%) of All Members
+196	196	Statistically decided weights for each ensemble member
+197	197	Climate Percentile (percentile values from climate distribution)
+198	198	Deviation of Ensemble Mean from Daily Climatology
+199	199	Extreme Forecast Index
+200	200	Equally Weighted Mean
+201	201	Percentile value (5%) of All Members
+202	202	Percentile value (25%) of All Members
+203	203	Percentile value (75%) of All Members
+204	204	Percentile value (95%) of All Members
+205	254	Reserved for Local Use
+255	255	Missing

@@ -1,0 +1,159 @@
+10	10	Parameter category (see Code table 4.1 )
+11	11	Parameter number (see Code table 4.2 and Notes 2 and 3 )
+12	12	Partition Table Number (PTN) (see Notes 1 and 3)
+13	13	Number of Partitions (NP) (see Note 1)
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta name="Keywords" content="GRIB">
+  <title>GRIBv2 - Table 4.54</title>
+</head>
+<body style="color: rgb(0, 0, 0); background-color: white;"
+ alink="#ff0000" link="#0000ff" vlink="#551a8b">
+<br>
+<center>
+<h3>GRIB2 - PRODUCT DEFINITION TEMPLATE 4.54</h3>
+<h3><span style="color: blue;">Individual ensemble forecast, control and perturbed, at <br>
+a horizontal level or in a horizontal layer at a point in <br> time for partitioned parameters</span></h3>
+<center><b><span style="font-size: 9pt;">Created 07/11/2013</span></b><br>
+</center>
+<br>
+<br>
+<center>
+<table style="width: 80%;" border="1" cellpadding="5" cellspacing="0">
+  <tbody>
+    <tr>
+      <th style="text-align: center; background-color: lightgrey;">Octet No.</th>
+      <th style="text-align: center; background-color: lightgrey;">Contents</th>
+    </tr>
+    <tr>
+      <td style="text-align: center;">10<br>
+      </td>
+      <td>Parameter category (see <a href="grib2_table4-1.shtml">Code
+table 4.1</a>)<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">11<br>
+      </td>
+      <td style="vertical-align: top;">Parameter number (see <a
+ href="grib2_table4-2.shtml">Code table 4.2 </a> and Notes 2 and 3</a>)<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">12<br></td>
+      <td style="vertical-align: top;">Partition Table Number (PTN) (see Notes 1 and 3)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">13<br></td>
+      <td style="vertical-align: top;">Number of Partitions (NP) (see Note 1)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">14 - (14+2NP-1)</td>
+      <td style="vertical-align: top;">Partition set (list all partition numbers in the partition)
+      (see Code table 4.PTN and Note 1)</a>)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(14+2NP) - (15+2NP)</td>
+      <td style="vertical-align: top;">Partition number (PN) (see Code table 4.PTN and Note 3)</a>)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(16+2NP)</td>
+      <td style="vertical-align: top;">Type of generating process (see
+      <a href="grib2_table4-3.shtml">Code table 4.3</a>)<br></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(17+2NP)</td>
+      <td style="vertical-align: top;">Background generating process identifier (defined by originating centre)<br></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(18+2NP)</td>
+      <td style="vertical-align: top;">Analysis or forecast generating process identifier
+      (see Code <a href="../../on388/tablea.html">ON388 Table A</a>)<br></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(19+2NP) - (20+2NP)</td>
+      <td style="vertical-align: top;">Hours after reference time of data cut-off after reference time (see Note 1)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(21+2NP)</td>
+      <td style="vertical-align: top;">Minutes of observational data cut-off after reference time</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(22+2NP)</td>
+      <td style="vertical-align: top;">Indicator of unit of time range
+      (see <a href="grib2_table4-4.shtml">Code table 4.4</a>)<br></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(23+2NP) - (26+2NP)</td>
+      <td style="vertical-align: top;">Forecast time in units defined by octet 18<br></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(27+2NP)</td>
+      <td style="vertical-align: top;">Type of first fixed surface (see <a href="grib2_table4-5.shtml">Code table 4.5</a>)<br></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(28+2NP)</td>
+      <td style="vertical-align: top;">Scale factor of first fixed surface</td>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(29+2NP) - (32+2NP)</td>
+      <td style="vertical-align: top;">Scaled value of first fixed surface<br></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(33+2NP)</td>
+      <td style="vertical-align: top;">Type of second fixed surfaced (see <a href="grib2_table4-5.shtml">Code table 4.5</a>)<br></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(34+2NP)</td>
+      <td style="vertical-align: top;">Scale factor of second fixed surface<br></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(35+2NP) - (38+2NP)</td>
+      <td style="vertical-align: top;">Scaled value of second fixed surfaces<br></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(39+2NP)</td>
+      <td style="vertical-align: top;">Type of ensemble forecast</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(40+2NP)</td>
+      <td style="vertical-align: top;">Perturbation number</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">(41+2NP)</td>
+      <td style="vertical-align: top;">Number of forecast in ensemble</td>
+    </tr>
+
+  </tbody>
+</table>
+</center>
+<br>
+<br>
+<table
+ style="margin-left: auto; margin-right: auto; width: 80%; text-align: left;"
+ border="0" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"><b>Notes:</b><br><br>
+(1) A single partition with code value PN from the partition set composed by the NP partitions is
+represented in the template.  The code values of the NP partitions are expressed in octets 14 to
+14+2NP-1.  The NP partitions are linked by the normalization formula stating the sum of all the NP
+partitions must be equal to a normalization term (N) on each point of the grid.<br>
+<br>
+(2) Only parameters expressing fractions or percentages can be used in this template. Code tables
+shall state clearly that they are meant to be used in partitioned parameters context.<br>
+<br>
+(3) The word "fraction" or the word "percentage" has to be explicitly used in the name of the 
+parameter to refer to a normalization term N=1 in the case of "fraction" and N=100 in the case
+of percentage.<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<center><a href="/pmb/docs/grib2/grib2_doc/">Back</a></center>
+<br>
+<br>
+</body>
+</html>

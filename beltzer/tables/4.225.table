@@ -1,0 +1,36 @@
+ <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta name="Keywords" content="GRIB">
+  <title>GRIBv2 - Code Table 4.225</title>
+</head>
+<body style="color: black; background-color: white;"
+ link="#0000ff" vlink="#551a8b" alink="#ff0000">
+<br>
+<center>
+<h3>GRIB2 - CODE TABLE 4.225</h3>
+<h3><span style="color: blue;">WEATHER</span></h3>
+</center>
+<center><b><span style="font-size: 9pt;">Revised 07/05/2022<br>
+<span style="color: red;">Red text depicts changes made since 05/29/2019</span></b><br>
+</center>
+<br>
+<br>
+<center>
+<table border="1" cellspacing="0" cellpadding="4" style="width: 80%;">
+  <tbody>
+    <tr>
+      <td style="text-align:center;color:red;">See FM 94 BUFR/FM 95 CREX Code table 0 20 003 - Present Weather<br>
+      <center><a href="/pmb/docs/grib2/grib2_doc/WMO306_vI2_BUFRCREX_TableB_en_v33.0.0.pdf"><b>WMO306_vI2_BUFRCREX_TableB_en_v33.0.0.pdf</b></a><br>
+      <span style="color: black;">(Released date: Version 33.0.0 - November 06, 2019)</center>
+    </td>
+    </tr>
+</table>
+</center>
+<br>
+<br>
+<center><a href="/pmb/docs/grib2/grib2_doc/">Back</a></center>
+<br>
+<br>
+</body>
+</html>

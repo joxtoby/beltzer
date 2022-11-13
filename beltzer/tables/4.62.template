@@ -1,0 +1,36 @@
+10	10	Parameter category (see Code table 4.1 )
+11	11	Parameter number (see Code table 4.2 )
+12	12	Tile classification (see Code table 4.242 )
+13	13	Total number ( NT ) of tile/attribute pairs (see Notes 1 and 2)
+14	14	Number of used spatial tiles ( NUT ) (see Notes 1 and 2)
+15	15	Tile index ( ITN={1,...,NUT} ) (see Note 1)
+16	16	Number of used tile attributes ( NAT ) for tile ITN (see Note 1)
+17	17	Attribute of tile (see Code table 4.241 ) ( A={A(1),...,A(NAT(ITN))}) (see Note 1)
+18	18	Type of generating process (see Code table 4.3 )
+19	19	Background generating process identifier (defined by originating centre)
+20	20	Analysis or forecast generating process identifier       (see Code ON388 Table A )
+21	22	Hours of observational data cut-off after reference time (see Note 3)
+23	23	Minutes of observational data cut-off after reference
+24	24	Indicator of unit of time range (see Code table 4.4 )
+25	28	Forecast time in units defined by octet 24 (see Note 4)
+29	29	Type of first fixed surface (see Code table 4.5 )
+30	30	Scale factor of first fixed surface
+31	34	Scaled value of first fixed surface
+35	35	Type of second fixed surfaced (see Code table 4.5 )
+36	36	Scale factor of second fixed surface
+37	40	Scaled value of second fixed surfaces
+41	42	Year of end of overall time interval
+43	43	Month of end of overall time interval
+44	44	Day of end of overall time interval
+45	45	Hour of end of overall time interval
+46	46	Minute of end overall time interval
+47	47	Second of end of overall time interval
+48	48	n ― number of time ranges       specifications describing the time intervals used to calculate the       statistically-processed field
+49	52	Total number of data values missing in the statistical process
+53	53	Statistical process used to calculate the processed field from the field at each time increment during the time range (see Code Table 4.10 )
+54	54	Type of time increment between successive fields used in the statistical processing (see Code Table 4.11 )
+55	55	Indicator of unit of time range over which statistical processing is done (see Code Table 4.4 )
+56	59	Length of the time range over which statistical processing is done, in units defined by the previous octet
+60	60	Indicator of unit of time for the increment between the successive fields used (see Code Table 4.4 )
+65	76	As octets 53 to 64, next innermost step of processing
+77	nn	Additional time range specifications, included in accordance with the value of n, Contents as octets 50 to 61, repeated as necessary.

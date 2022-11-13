@@ -1,0 +1,47 @@
+10	10	Parameter category (see Code Table 4.1 )
+11	11	Parameter number (see Code Table 4.1 )
+12	12	Type of generating process (see Code Table 4.3 )
+13	13	Background generating process identifier (defined by originating centre)
+14	14	Forecast generating process identifier       (see Code ON388 Table A )
+15	16	Hours after reference time data cut-off (see Note 1)
+17	17	Minutes after reference time data cut-off
+18	18	Indicator of unit of time range (see Code Table 4.4 )
+19	22	Forecast time in units defined by octet 18 (see Note 2)
+23	23	Type of first fixed surface (see Code Table 4.5 )
+24	24	Scale factor of first fixed surface
+25	28	Scaled value of first fixed surface
+29	29	Type of second fixed surfaced (see Code Table 4.5 )
+30	30	Scale factor of second fixed surface
+31	34	Scaled value of second fixed surfaces
+35	35	Derived forecast (see Code Table 4.7 )
+36	36	Number of forecasts in the ensemble (N)
+37	37	Cluster identifier
+38	38	Number of cluster to which the high resolution control belongs
+39	39	Number of cluster to which the high resolution control belongs
+40	40	Total number of clusters
+41	41	Clustering method (see Code Table 4.8 )
+42	45	Northern latitude of cluster domain
+46	49	Southern latitude of cluster domain
+50	53	eastern longitude of cluster domain
+54	57	Western longitude of cluster domain
+58	58	N c - Number of forecasts in the cluster
+59	59	Scale factor of standard deviation in the cluster
+60	63	Scaled value of standard deviation in the cluster
+64	64	Scale factor of distance of the cluster from ensemble mean
+65	68	Scaled value of distance of the cluster from ensemble mean
+69	70	Year of end of overall time interval
+71	71	Month of end of overall time interval
+72	72	Day of end of overall time overall time interval
+73	73	Hour of end of overall time interval
+74	74	Minute of end overall time interval
+75	75	Second of end of overall time interval
+76	76	n ― number of time ranges specifications describing the time intervals used to calculate the statistically-processed field
+77	80	Total number of data values missing in the statistical process
+82	82	Type of time increment between successive fields used in the statistical processing (see Code Table 4.11 )
+83	83	Indicator of unit of time for time range over which statistical processing is done (see Code Table 4.4 )
+84	87	Length of the time range over which statistical processing is done, in units defined by the previous octet
+88	88	Indicator of unit of time for the increment between the successive fields used (see Code Table 4.4 )
+89	92	Time increment between successive fields, in units defined by the previous octet (see Notes 3 and 4)
+93	104	As octets 81 to 92, next innermost step of processing
+105	nn	
+Additional time range specifications, included in accordance with the value of n, Contents as octets 81 to 92, repeated as necessary.    (nn+1)	(nn+N c )	List of N c ensemble forecast numbers (N c is given in octet 58)

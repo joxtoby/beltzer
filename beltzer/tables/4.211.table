@@ -1,0 +1,6 @@
+0	0	Low Bypass
+1	1	High Bypass
+2	2	Non-Bypass
+3	191	Reserved
+192	254	Reserved for Local Use
+255	255	Missing

@@ -1,0 +1,13 @@
+0	0	Seconds prior to initial reference time (defined in Section 1)	s	TSEC
+1	1	Geographical Latitude	° N	GEOLAT
+2	2	Geographical Longitude	° E	GEOLON
+3	3	Days Since Last Observation	d	DSLOBS
+4 	191	Reserved		
+192	192	Latitude (-90 to 90)	°	NLAT
+193	193	East Longitude (0 to 360)	°	ELON
+194	194	Seconds prior to initial reference time	s	RTSEC
+195	195	Model Layer number (From bottom up)		MLYNO
+196	196	Latitude (nearest neighbor) (-90 to 90)	°	NLATN
+197	197	East Longitude (nearest neighbor) (0 to 360)	°	ELONN
+198	254	Reserved for Local Use
+255	255	Missing		

@@ -1,0 +1,9 @@
+0	0	Unperturbed High-Resolution Control Forecast
+1	1	Unperturbed Low-Resolution Control Forecast
+2	2	Negatively Perturbed Forecast
+3	3	Positively Perturbed Forecast
+4	4	Multi-Model Forecast
+5 	191	Reserved
+192	192	Perturbed Ensemble Member
+193	254	Reserved for Local Use
+255	255	Missing

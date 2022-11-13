@@ -1,0 +1,16 @@
+0	0	Average
+1	1	Accumulation (see Note 1)
+2	2	Maximum
+3	3	Minimum
+4	4	Difference (value at the end of the time range minus value at the beginning)
+5	5	Root Mean Square
+6	6	Standard Deviation
+7	7	Covariance (temporal variance) (see Note 2)
+8	8	Difference ( value at the beginning of the time range minus value at the end)
+9	9	Ratio (see Note 3)
+10	10	Standardized Anomaly
+11	11	Summation
+12	12	Return period
+13 	191	Reserved
+192	254	Reserved for Local Use
+255	255	Missing

@@ -1,0 +1,8 @@
+0	0	Aerosol Type	See Table 4.205	AEROT
+1 	191	Reserved		
+192	192	Particulate matter (coarse)	µg m -3	PMTC
+193	193	Particulate matter (fine)	µg m -3	PMTF
+194	194	Particulate matter (fine)	log10 (µg m -3 )	LPMTF
+195	195	Integrated column particulate matter (fine)	log10 (µg m -3 )	LIPMF
+196	254	Reserved for Local Use
+255	255	Missing		

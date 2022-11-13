@@ -1,0 +1,45 @@
+0	0	Parcel Lifted Index (to 500 hPa)	K	PLI
+1	1	Best Lifted Index (to 500 hPa)	K	BLI
+2	2	K Index	K	KX
+3	3	KO Index	K	KOX
+4	4	Total Totals Index	K	TOTALX
+5	5	Sweat Index	Numeric	SX
+6	6	Convective Available Potential Energy	J kg -1	CAPE
+7	7	Convective Inhibition	J kg -1	CIN
+8	8	Storm Relative Helicity	m 2 s -2	HLCY
+9	9	Energy Helicity Index	Numeric	EHLX
+10	10	Surface Lifted Index	K	LFT X
+11	11	Best (4 layer) Lifted Index	K	4LFTX
+12	12	Richardson Number	Numeric	RI
+13	13	Showalter Index	K	SHWINX
+14	14	Reserved
+15	15	Updraft Helicity	m 2 s -2	UPHL
+16	16	Bulk Richardson Number	Numeric	BLKRN
+17	17	Gradient Richardson Number	Numeric	GRDRN
+18	18	Flux Richardson Number	Numeric	FLXRN
+19	19	Convective Available Potential Energy Shear	m 2 s -2	CONAPES
+20	20	Thunderstorm intensity index	See Table 4.246  TIIDEX
+21 	191	Reserved
+192	192	Surface Lifted Index	K	LFT X
+193	193	Best (4 layer) Lifted Index	K	4LFTX
+194	194	Richardson Number	Numeric	RI
+195	195	Convective Weather Detection Index		CWDI
+196	196	Ultra Violet Index	W m -2	UVI
+197	197	Updraft Helicity	m 2 s -2	UPHL
+198	198	Leaf Area Index	Numeric	LAI
+199	199	Hourly Maximum of Updraft Helicity	m 2 s -2	MXUPHL
+200	200	Hourly Minimum of Updraft Helicity	m 2 s -2	MNUPHL
+201	201	Bourgoiun Negative Energy Layer (surface to freezing level)	J kg -1	BNEGELAY
+202	202	Bourgoiun Positive Energy Layer (2k ft AGL to 400 hPa)	J kg -1	BPOSELAY
+203	203	Downdraft CAPE	J kg -1	DCAPE
+204	204	Effective Storm Relative Helicity	m 2 s -2	EFHL
+205	205	Enhanced Stretching Potential	Numeric	ESP
+206	206	Critical Angle	Degree	CANGLE
+207	207	Effective Surface Helicity	m 2 s -2	E3KH
+208	208	Significant Tornado Parameter with CIN-Effective Layer	numeric	STPC
+209	209	Significant Hail Parameter	numeric	SIGH
+210	210	Supercell Composite Parameter-Effective Layer	numeric	SCCP
+211	211	Significant Tornado parameter-Fixed Layer	numeric	SIGT
+212	212	Mixed Layer (100 mb) Virtual LFC	numeric	MLFC
+213	254	Reserved for Local Use
+255	255	Missing

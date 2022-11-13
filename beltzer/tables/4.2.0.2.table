@@ -1,0 +1,98 @@
+0	0	Wind Direction (from which blowing)	°	WDIR
+1	1	Wind Speed	m s -1	WIND
+2	2	U-Component of Wind	m s -1	UGRD
+3	3	V-Component of Wind	m s -1	VGRD
+4	4	Stream Function	m 2 s -1	STRM
+5	5	Velocity Potential	m 2 s -1	VPOT
+6	6	Montgomery Stream Function	m 2 s -2	MNTSF
+7	7	Sigma Coordinate Vertical Velocity	s -1	SGCVV
+8	8	Vertical Velocity (Pressure)	Pa s -1	VVEL
+9	9	Vertical Velocity (Geometric)	m s -1	DZDT
+10	10	Absolute Vorticity	s -1	ABSV
+11	11	Absolute Divergence	s -1	ABSD
+12	12	Relative Vorticity	s -1	RELV
+13	13	Relative Divergence	s -1	RELD
+14	14	Potential Vorticity	K m 2 kg -1 s -1	PVORT
+15	15	Vertical U-Component Shear	s -1	VUCSH
+16	16	Vertical V-Component Shear	s -1	VVCSH
+17	17	Momentum Flux, U-Component	N m -2	UFLX
+18	18	Momentum Flux, V-Component	N m -2	VFLX
+19	19	Wind Mixing Energy	J	WMIXE
+20	20	Boundary Layer Dissipation	W m -2	BLYDP
+21	21	Maximum Wind Speed	m s -1	MAXGUST
+22	22	Wind Speed (Gust)	m s -1	GUST
+23	23	U-Component of Wind (Gust)	m s -1	UGUST
+24	24	V-Component of Wind (Gust)	m s -1	VGUST
+25	25	Vertical Speed Shear	s -1	VWSH
+26	26	Horizontal Momentum Flux	N m -2	MFLX
+27	27	U-Component Storm Motion	m s -1	USTM
+28	28	V-Component Storm Motion	m s -1	VSTM
+29	29	Drag Coefficient	Numeric	CD
+30	30	Frictional Velocity	m s -1	FRICV
+31	31	Turbulent Diffusion Coefficient for Momentum	m 2 s -1	TDCMOM
+32	32	Eta Coordinate Vertical Velocity	s -1	ETACVV
+33	33	Wind Fetch	m	WINDF
+34	34	Normal Wind Component	m s -1	NWIND
+35	35	Tangential Wind Component	m s -1	TWIND
+36	36	Amplitude Function for Rossby Wave Envelope for Meridional Wind	m s -1	AFRWE
+37	37	Northward Turbulent Surface Stress	N m -2 s	NTSS
+38	38	Eastward Turbulent Surface Stress	N m -2 s	ETSS
+39	39	Eastward Wind Tendency Due to Parameterizations	m s -2	EWTPARM
+40	40	Northward Wind Tendency Due to Parameterizations	m s -2	NWTPARM
+41	41	U-Component of Geostrophic Wind	m s -1	UGWIND
+42	42	V-Component of Geostrophic Wind	m s -1	VGWIND
+43	43	Geostrophic Wind Direction	°	GEOWD
+44	44	Geostrophic Wind Speed	m s -1	GEOWS
+45	45	Unbalanced Component of Divergence	s -1	UNDIV
+46	46	Vorticity Advection	s -2	VORTADV
+47	47	Surface roughness for heat,(see Note 5)	m	SFRHEAT
+48	48	Surface roughness for moisture,(see Note 6)	m	SFRMOIST
+49 	191	Reserved
+192	192	Vertical Speed Shear	s -1	VWSH
+193	193	Horizontal Momentum Flux	N m -2	MFLX
+194	194	U-Component Storm Motion	m s -1	USTM
+195	195	V-Component Storm Motion	m s -1	VSTM
+196	196	Drag Coefficient	non-dim	CD
+197	197	Frictional Velocity	m s -1	FRICV
+198	198	Latitude of U Wind Component of           Velocity	deg	LAUV
+199	199	Longitude of U Wind Component of            Velocity	deg	LOUV
+200	200	Latitude of V Wind Component of Velocity	deg	LAVV
+201	201	Longitude of V Wind Component of                   Velocity	deg	LOVV
+202	202	Latitude of Presure Point	deg	LAPP
+203	203	Longitude of Presure Point	deg	LOPP
+204	204	Vertical Eddy Diffusivity Heat exchange	m 2 s -1	VEDH
+205	205	Covariance between Meridional and Zonal Components of the wind.	m 2 s -2	COVMZ
+206	206	Covariance between Temperature and Zonal Components of the wind.	Km s -1	COVTZ
+207	207	Covariance between Temperature and Meridional Components of the wind.	Km s -1	COVTM
+208	208	Vertical Diffusion Zonal Acceleration	m s -2	VDFUA
+209	209	Vertical Diffusion Meridional Acceleration	m s -2	VDFVA
+210	210	Gravity wave drag zonal acceleration	m s -2	GWDU
+211	211	Gravity wave drag meridional acceleration	m s -2	GWDV
+212	212	Convective zonal momentum mixing acceleration	m s -2	CNVU
+213	213	Convective meridional momentum mixing acceleration	m s -2	CNVV
+214	214	Tendency of vertical velocity	m s -2	WTEND
+215	215	Omega (Dp/Dt) divide by density	K	OMGALF
+216	216	Convective Gravity wave drag zonal acceleration	m s -2	CNGWDU
+217	217	Convective Gravity wave drag meridional acceleration	m s -2	CNGWDV
+218	218	Velocity Point Model Surface		LMV
+219	219	Potential Vorticity (Mass-Weighted)	1/s/m	PVMWW
+220	220	Hourly Maximum of Upward Vertical Velocity	m s -1	MAXUVV
+221	221	Hourly Maximum of Downward Vertical Velocity	m s -1	MAXDVV
+222	222	U Component of Hourly Maximum 10m Wind Speed	m s -1	MAXUW
+223	223	V Component of Hourly Maximum 10m Wind Speed	m s -1	MAXVW
+224	224	Ventilation Rate	m 2 s -1	VRATE
+225	225	Transport Wind Speed	m s -1	TRWSPD
+226	226	Transport Wind Direction	Deg	TRWDIR
+227	227	Earliest Reasonable Arrival Time (10% exceedance)	s	TOA10
+228	228	Most Likely Arrival Time (50% exceedance)	s	TOA50
+229	229	Most Likely Departure Time (50% exceedance)	s	TOD50
+230	230	Latest Reasonable Departure Time (90% exceedance)	s	TOD90
+231	231	Tropical Wind Direction	°	TPWDIR
+232	232	Tropical Wind Speed	m s -1	TPWSPD
+233	233	Inflow Based (ESFC) to 50% EL Shear Magnitude	kt	ESHR
+234	234	U Component Inflow Based to 50% EL Shear Vector	kt	UESH
+235	235	V Component Inflow Based to 50% EL Shear Vector	kt	VESH
+236	236	U Component Bunkers Effective Right Motion	kt	UEID
+237	237	V Component Bunkers Effective Right Motion	kt	VEID
+238	254	Reserved for Local Use
+255	255	Missing

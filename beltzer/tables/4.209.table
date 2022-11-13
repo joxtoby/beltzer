@@ -1,0 +1,8 @@
+0	0	Reserved
+1	1	Stable
+2	2	Mechanically-Driven Turbulence
+3	3	Force Convection
+4	4	Free Convection
+5	191	Reserved
+192	254	Reserved for Local Use
+255	255	Missing

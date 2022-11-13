@@ -1,0 +1,26 @@
+10	10	Parameter category (see Code table 4.1 )
+11	11	Parameter number (see Code table 4.2 )
+12	13	Aerosol Type (see Code table 4.233 )
+14	14	Type of interval for first and second size (see Code table 4.91 )
+15	15	Scale factor of first size
+16	19	Scale value of first size in meters
+20	20	Scale factor of second size
+21	24	Scale value of second size in meters
+25	25	Type of interval for first and second wavelength (see Code table 4.91 )
+26	26	Scale factor of first wavelength
+27	30	Scale value of first wavelength in meters
+31	31	Scale factor of second wavelength
+32	35	Scale value of second wavelength in meters
+36	36	Type of generating process (see Code table 4.3 )
+37	37	Background generating process identifier (defined by originating centre)
+38	38	Analysis or forecast generating process identifier       (see Code ON388 Table A )
+39	40	Hours of observational data cutoff after reference time (see Note)
+41	41	Minutes of observational data cutoff after reference time (see Note)
+42	42	Indicator of unit of time range (see Code table 4.4 )
+43	46	Forecast time in units defined by octet 42
+47	47	Type of first fixed surface (see Code table 4.5 )
+48	48	Scale factor of first fixed surface
+49	52	Scaled value of first fixed surface
+53	53	Type of second fixed surfaced (see Code table 4.5 )
+54	54	Scale factor of second fixed surface
+55	58	Scaled value of second fixed surfaces

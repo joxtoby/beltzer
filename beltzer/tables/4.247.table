@@ -1,0 +1,7 @@
+0	0	No precipitation occurrence
+1	1	Light precipitation
+2	2	Moderate precipitation
+3	3	Heavy precipitation
+4	191	Reserved
+192	254	Reserved for Local Use
+255	255	Missing

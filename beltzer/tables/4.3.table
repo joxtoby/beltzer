@@ -1,0 +1,31 @@
+0	0	Analysis
+1	1	Initialization
+2	2	Forecast
+3	3	Bias Corrected Forecast
+4	4	Ensemble Forecast
+5	5	Probability Forecast
+6	6	Forecast Error
+7	7	Analysis Error
+8	8	Observation
+9	9	Climatological
+10	10	Probability-Weighted Forecast
+11	11	Bias-Corrected Ensemble Forecast
+12	12	Post-processed Analysis (See Note)
+13	13	Post-processed Forecast (See Note)
+14	14	Nowcast
+15	15	Hindcast
+16	16	Physical Retrieval
+17	17	Regression Analysis
+18	18	Difference Between Two Forecasts
+19 	191	Reserved
+192	192	Forecast Confidence Indicator
+193	193	Probability-matched Mean
+194	194	Neighborhood Probability
+195	195	Bias-Corrected and Downscaled Ensemble Forecast
+196	196	Perturbed Analysis for Ensemble Initialization
+197	197	Ensemble Agreement Scale Probability
+198	198	Post-Processed Deterministic-Expert-Weighted Forecast
+199	199	Ensemble Forecast Based on Counting
+200	200	Local Probability-matched Mean
+201	254	Reserved for Local Use
+255	255	Missing
