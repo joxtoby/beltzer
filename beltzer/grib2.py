@@ -1,10 +1,11 @@
 import struct
 from io import BytesIO
-from typing import List, Optional, Union
+from typing import Callable, List, Optional, Union
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta
 
 from beltzer import templates
+from beltzer.downloaders import RemoteFilePointer
 from beltzer.tables import table_lookup
 
 
@@ -237,6 +238,34 @@ class Message:
                 return msg
 
 
+    @classmethod
+    def from_remote_file(cls, rfp: RemoteFilePointer, msg_num: Optional[int] = 1) -> "Message":
+        msg = cls(msg_num)
+        msg.first_byte = rfp.tell()
+        section0_data = rfp.read(16)
+        if not section0_data:
+            return None
+        msg.section0 = Section0.parse(section0_data)
+
+        while True:
+            data = rfp.read(5)
+            section_length = struct.unpack(">l", data[:4])[0]
+            section_number = data[4]
+
+            if section_number == 1:
+                data += rfp.read(section_length - 5)
+                msg.section1 = Section1.parse(data)
+            elif section_number == 4:
+                data += rfp.read(section_length - 5)
+                msg.section4 = Section4.parse(data)
+            elif section_number == 7:
+                rfp.seek(section_length - 5, 1)
+                rfp.seek(4, 1) # for the tail "7777" indicator
+                return msg
+            else:
+                rfp.seek(section_length - 5, 1)
+
+
 class Grib2:
 
     messages: List[Message] = []
@@ -261,6 +290,19 @@ class Grib2:
         grib2 = cls()
         while True:
             message = Message.from_fileobj(_in, msg_num=msg_num)
+            if message:
+                grib2.messages.append(message)
+                msg_num += 1
+            else:
+                return grib2
+
+    @classmethod
+    def open_remote(cls, url: str, downloader: Callable) -> "Grib2":
+        msg_num = 1
+        grib2 = cls()
+        rfp = RemoteFilePointer(url, downloader)
+        while True:
+            message = Message.from_remote_file(rfp, msg_num)
             if message:
                 grib2.messages.append(message)
                 msg_num += 1
