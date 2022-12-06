@@ -5,7 +5,7 @@ with open("beltzer/__init__.py") as f:
         if line.startswith('__version__'):
             version = line.split()[-1].strip('"').strip("'")
 
-with open("README.rst") as f:
+with open("README.md") as f:
     readme = f.read()
 
 setup(
