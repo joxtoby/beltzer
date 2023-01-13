@@ -124,6 +124,7 @@ class Section4:
     product_definition_template: templates.BaseTemplate
     optional_coordinate_vals: Optional[bytes] = None
     _parameter: Optional[str] = field(init=False, repr=False, default=None)
+    _description: Optional[str] = field(init=False, repr=False, default=None)
 
     @classmethod
     def parse(cls, data: bytes):

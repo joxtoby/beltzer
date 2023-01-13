@@ -11,7 +11,7 @@ from beltzer import grib2
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger()
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 @dataclass
 class IndexEntry:
@@ -20,6 +20,7 @@ class IndexEntry:
     last_byte: int
     reference_time: datetime
     parameter: str
+    description: str
     level: str
     lead_seconds: int
 
@@ -90,6 +91,7 @@ class Index:
                     last_byte=message.first_byte + message.total_length - 1,
                     reference_time=message.reference_time,
                     parameter=message.parameter,
+                    description=message.description,
                     level=message.level,
                     lead_seconds=message.lead_seconds,
                 )
