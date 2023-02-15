@@ -11,7 +11,7 @@ from beltzer import grib2
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger()
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 
 @dataclass
 class IndexEntry:
@@ -20,9 +20,9 @@ class IndexEntry:
     last_byte: int
     reference_time: datetime
     parameter: str
-    description: str
     level: str
     lead_seconds: int
+    description: str = ''
 
     def to_ncep_row(self) -> str:
         """
@@ -60,24 +60,27 @@ class Index:
                 _out.write(entry.to_ncep_row() + "\n")
 
     @classmethod
-    def from_ncep_idx(cls, idx: str) -> "Index":
+    def from_ncep_idx(cls, idx_file: Optional[str] = None, idx_data: Optional[str] = None) -> "Index":
+        if idx_file:
+            with open(idx_file) as _in:
+                idx_data = _in.read()
+        rows = [row for row in idx_data.split("\n") if row] # strip out any blank lines
+
         index = cls()
-        with open(idx) as _in:
-            rows = _in.split("\n")
-            for i in range(len(rows)):
-                message_number, first_byte, ref_time, parameter, level, lead, _ = rows[i].split(":")
-                next_first_byte = rows[i + 1].split(":")[1]
-                index.entries.append(
-                    IndexEntry(
-                        message_number=int(message_number),
-                        first_byte=int(first_byte),
-                        last_byte=int(next_first_byte - 1),
-                        reference_time=ref_time,
-                        parameter=parameter,
-                        level=level,
-                        lead_seconds=lead,
-                    )
+        for i in range(len(rows)):
+            message_number, first_byte, ref_time, parameter, level, lead, _ = rows[i].split(":")
+            next_first_byte = rows[i + 1].split(":")[1] if i < len(rows) - 1 else None
+            index.entries.append(
+                IndexEntry(
+                    message_number=int(message_number),
+                    first_byte=int(first_byte),
+                    last_byte=int(next_first_byte) - 1 if next_first_byte else None,
+                    reference_time=ref_time,
+                    parameter=parameter,
+                    level=level,
+                    lead_seconds=lead,
                 )
+            )
         return index
 
     @classmethod

@@ -9,9 +9,57 @@ def load(template_num: Union[str, float], data: bytes):
     cls = f"Template{str(template_num).replace('.', '_')}"
     return globals()[cls].load(data)
 
+@dataclass
+class Template3_0:
+    shape_of_earth: int
+    scale_factor_of_radius_of_spherical_earth: int
+    scale_value_of_radius_of_spherical_earth: int
+    scale_factor_of_major_axis_of_oblate_spheroid_earth: int
+    scale_value_of_major_axis_of_oblate_spheroid_earth: int
+    scale_factor_of_minor_axis_of_oblate_spheroid_earth: int
+    scale_value_of_minor_axis_of_oblate_spheroid_earth: int
+    num_points_along_parallel: int
+    num_points_along_meridian: int
+    basic_angle_initial_production_domain: int
+    subdivisions_of_basic_angle: int
+    latitude_of_first_grid_point: int
+    longitude_of_first_grid_point: int
+    resolution_and_component_flags: int
+    latitude_of_last_grid_point: int
+    longitude_of_last_grid_point: int
+    i_direction_increment: int
+    j_direction_increment: int
+    scanning_mode: int
+    list_num_points_along_each_merdian_or_parallel: bytes
+
+    @classmethod
+    def load(cls, data: bytes) -> "Template3_0":
+        return cls(
+            shape_of_earth=data[0],
+            scale_factor_of_radius_of_spherical_earth=data[1],
+            scale_value_of_radius_of_spherical_earth=struct.unpack('>l', data[2:6])[0],
+            scale_factor_of_major_axis_of_oblate_spheroid_earth=data[6],
+            scale_value_of_major_axis_of_oblate_spheroid_earth=struct.unpack('>l', data[7:11])[0],
+            scale_factor_of_minor_axis_of_oblate_spheroid_earth=data[11],
+            scale_value_of_minor_axis_of_oblate_spheroid_earth=struct.unpack('>l', data[12:16])[0],
+            num_points_along_parallel=struct.unpack('>l', data[16:20])[0],
+            num_points_along_meridian=struct.unpack('>l', data[20:24])[0],
+            basic_angle_initial_production_domain=struct.unpack('>l', data[24:28])[0],
+            subdivisions_of_basic_angle=struct.unpack('>l', data[28:32])[0],
+            latitude_of_first_grid_point=struct.unpack('>l', data[32:36])[0],
+            longitude_of_first_grid_point=struct.unpack('>l', data[36:40])[0],
+            resolution_and_component_flags=data[40],
+            latitude_of_last_grid_point=struct.unpack('>l', data[41:45])[0],
+            longitude_of_last_grid_point=struct.unpack('>l', data[45:49])[0],
+            i_direction_increment=struct.unpack('>l', data[49:53])[0],
+            j_direction_increment=struct.unpack('>l', data[53:57])[0],
+            scanning_mode=data[57],
+            list_num_points_along_each_merdian_or_parallel=data[58:]
+        )
+
 
 @dataclass
-class BaseTemplate:
+class Template4_0:
     parameter_category: int
     parameter_number: int
     type_of_generating_process: int
@@ -30,7 +78,7 @@ class BaseTemplate:
     template_length: int
 
     @classmethod
-    def load(cls, data: bytes) -> None:
+    def load(cls, data: bytes) -> "Template4_0":
         return cls(
             parameter_category=data[0],
             parameter_number=data[1],
@@ -86,25 +134,20 @@ class BaseTemplate:
 
 
 @dataclass
-class Template4_0(BaseTemplate):
-    pass
-
-
-@dataclass
-class Template4_1(BaseTemplate):
+class Template4_1(Template4_0):
     type_of_ensemble_forecast: int
     perturbation_number: int
     num_forecasts_in_ensemble: int
 
 
 @dataclass
-class Template4_2(BaseTemplate):
+class Template4_2(Template4_0):
     derived_forecast: int
     num_forecasts_in_ensemble: int
 
 
 @dataclass
-class Template4_3(BaseTemplate):
+class Template4_3(Template4_0):
     derived_forecast: int
     num_forecasts_in_ensemble: int
     cluster_identifier: int
@@ -124,7 +167,7 @@ class Template4_3(BaseTemplate):
 
 
 @dataclass
-class Template4_4(BaseTemplate):
+class Template4_4(Template4_0):
     derived_forecast: int
     num_forecasts_in_ensemble: int
     cluster_identifier: int
@@ -143,7 +186,7 @@ class Template4_4(BaseTemplate):
 
 
 @dataclass
-class Template4_5(BaseTemplate):
+class Template4_5(Template4_0):
     forecast_probability_number: int
     total_num_forecast_probabilities: int
     probability_type: int
@@ -154,15 +197,15 @@ class Template4_5(BaseTemplate):
 
 
 @dataclass
-class Template4_6(BaseTemplate):
+class Template4_6(Template4_0):
     percentile_value: int
 
 
 @dataclass
-class Template4_7(BaseTemplate):
+class Template4_7(Template4_0):
     pass
 
 
 @dataclass
-class Template4_8(BaseTemplate):
+class Template4_8(Template4_0):
     pass
