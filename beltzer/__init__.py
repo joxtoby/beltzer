@@ -144,7 +144,10 @@ def load_remote_message(
     message: Optional[grib2.Message] = None,
     message_number: Optional[int] = None,
 ) -> grib2.Message:
-    if message is None:
-        message = [m for m in index.messages if m.message_number == message_number]
-    _bytes = downloader(grib_url, message.first_byte, message.first_byte + message.total_length - 1)
+    if message is not None:
+        _bytes = downloader(grib_url, message.first_byte, message.first_byte + message.total_length - 1)
+    else:
+        entry = [e for e in index.entries if e.message_number == message_number][0]
+        _bytes = downloader(grib_url, entry.first_byte, entry.last_byte)
     return grib2.extract_first_message(_bytes)
+
