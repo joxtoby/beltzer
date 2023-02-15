@@ -1,7 +1,7 @@
 import struct
 from io import BytesIO
 from typing import Callable, List, Optional, Union
-from dataclasses import dataclass, field
+from dataclasses import asdict, dataclass, field
 from datetime import datetime, timedelta
 
 from beltzer import templates
@@ -111,6 +111,50 @@ class Section1:
 
 
 @dataclass
+class Section3:
+    """
+    Grid Definition Section
+    https://www.nco.ncep.noaa.gov/pmb/docs/grib2/grib2_doc/grib2_sect3.shtml
+    """
+
+    section_length: int
+    section_number: int
+    grid_definition_source: int
+    num_data_points: int
+    optional_list_num_octets: int
+    optional_list_interpretation: int
+    grid_definition_template_number: int
+    grid_definition_template: bytes
+    optional_list: bytes
+
+    @classmethod
+    def parse(cls, data: bytes):
+        section_length = struct.unpack(">l", data[:4])[0]
+        section_number = data[4]
+        assert section_number == 3
+
+        grid_definition_source = data[5]
+        num_data_points = struct.unpack(">l", data[6:10])[0]
+        optional_list_num_octets = data[10]
+        optional_list_interpretation = data[11]
+        grid_definition_template_number = struct.unpack(">h", data[12:14])[0]
+        grid_definition_template = templates.load(f"3.{grid_definition_template_number}", data[14:section_length - optional_list_num_octets])
+        optional_list = data[section_length - optional_list_num_octets:]
+
+        return cls(
+            section_length=section_length,
+            section_number=section_number,
+            grid_definition_source=grid_definition_source,
+            num_data_points=num_data_points,
+            optional_list_num_octets=optional_list_num_octets,
+            optional_list_interpretation=optional_list_interpretation,
+            grid_definition_template_number=grid_definition_template_number,
+            grid_definition_template=grid_definition_template,
+            optional_list=optional_list
+        )
+
+
+@dataclass
 class Section4:
     """
     Product Definition Section
@@ -121,14 +165,17 @@ class Section4:
     section_number: int
     num_coordinate_vals_after_template: int
     product_definition_template_num: int
-    product_definition_template: templates.BaseTemplate
+    product_definition_template: templates.Template4_0
     optional_coordinate_vals: Optional[bytes] = None
     _parameter: Optional[str] = field(init=False, repr=False, default=None)
+    _description: Optional[str] = field(init=False, repr=False, default=None)
 
     @classmethod
     def parse(cls, data: bytes):
         section_length = struct.unpack(">l", data[:4])[0]
         section_number = data[4]
+        assert section_number == 4
+
         num_coord_vals_after_template = struct.unpack(">h", data[5:7])[0]
         product_definition_template_num = struct.unpack(">h", data[7:9])[0]
         template = templates.load(f"4.{product_definition_template_num}", data[9:])
@@ -167,10 +214,69 @@ class Section4:
         return self._description
 
 
+@dataclass
+class Section5:
+    """
+    Data Representation Section
+    https://www.nco.ncep.noaa.gov/pmb/docs/grib2/grib2_doc/grib2_sect5.shtml
+    """
+
+    section_length: int
+    section_number: int
+    number_of_data_points: int
+    data_representation_template_number: int
+    data_representation_template: int
+
+    @classmethod
+    def parse(cls, data: bytes):
+        section_length = struct.unpack(">l", data[:4])[0]
+        section_number = data[4]
+        assert section_number == 5
+
+        number_of_data_points = struct.unpack(">l", data[5:9])[0]
+        data_rep_template_number = struct.unpack(">h", data[10:12])[0]
+        data_rep_template = data[12:] # TODO: parse through template lookup
+        print(f'data_rep_template_number: {data_rep_template_number}')
+        #[print(f'{k}: {v}') for k, v in asdict(grid_definition_template).items()]
+        return cls(
+            section_length=section_length,
+            section_number=section_number,
+            number_of_data_points=number_of_data_points,
+            data_representation_template_number=data_rep_template_number,
+            data_representation_template=data_rep_template
+        )
+
+
+@dataclass
+class Section7:
+    """
+    Data Section
+    https://www.nco.ncep.noaa.gov/pmb/docs/grib2/grib2_doc/grib2_sect7.shtml
+    """
+
+    section_length: int
+    section_number: int
+    values: bytes
+
+    @classmethod
+    def parse(cls, data: bytes):
+        section_length = struct.unpack(">l", data[:4])[0]
+        section_number = data[4]
+        assert section_number == 7
+
+        return cls(
+            section_length=section_length,
+            section_number=section_number,
+            values=data[5:]
+        )
+
+
 class Message:
     section0: Section0
     section1: Section1
+    section3: Section3
     section4: Section4
+    section5: Section5
     raw_bytes: bytes
     first_byte: int
     message_number: int
@@ -231,8 +337,12 @@ class Message:
 
             if section_number == 1:
                 msg.section1 = Section1.parse(data)
+            elif section_number == 3:
+                msg.section3 = Section3.parse(data)
             elif section_number == 4:
                 msg.section4 = Section4.parse(data)
+            elif section_number == 5:
+                msg.section5 = Section5.parse(data)
             elif section_number == 7:
                 msg.raw_bytes += fp.read(4)
                 return msg
@@ -293,6 +403,7 @@ class Grib2:
             if message:
                 grib2.messages.append(message)
                 msg_num += 1
+                return grib2 #debug
             else:
                 return grib2
 

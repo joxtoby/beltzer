@@ -11,7 +11,7 @@ from beltzer import grib2
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger()
 
-__version__ = "0.1.0"
+__version__ = "0.1.2"
 
 @dataclass
 class IndexEntry:
@@ -22,6 +22,7 @@ class IndexEntry:
     parameter: str
     level: str
     lead_seconds: int
+    description: str = ''
 
     def to_ncep_row(self) -> str:
         """
@@ -59,24 +60,27 @@ class Index:
                 _out.write(entry.to_ncep_row() + "\n")
 
     @classmethod
-    def from_ncep_idx(cls, idx: str) -> "Index":
+    def from_ncep_idx(cls, idx_file: Optional[str] = None, idx_data: Optional[str] = None) -> "Index":
+        if idx_file:
+            with open(idx_file) as _in:
+                idx_data = _in.read()
+        rows = [row for row in idx_data.split("\n") if row] # strip out any blank lines
+
         index = cls()
-        with open(idx) as _in:
-            rows = _in.split("\n")
-            for i in range(len(rows)):
-                message_number, first_byte, ref_time, parameter, level, lead, _ = rows[i].split(":")
-                next_first_byte = rows[i + 1].split(":")[1]
-                index.entries.append(
-                    IndexEntry(
-                        message_number=int(message_number),
-                        first_byte=int(first_byte),
-                        last_byte=int(next_first_byte - 1),
-                        reference_time=ref_time,
-                        parameter=parameter,
-                        level=level,
-                        lead_seconds=lead,
-                    )
+        for i in range(len(rows)):
+            message_number, first_byte, ref_time, parameter, level, lead, _ = rows[i].split(":")
+            next_first_byte = rows[i + 1].split(":")[1] if i < len(rows) - 1 else None
+            index.entries.append(
+                IndexEntry(
+                    message_number=int(message_number),
+                    first_byte=int(first_byte),
+                    last_byte=int(next_first_byte) - 1 if next_first_byte else None,
+                    reference_time=ref_time,
+                    parameter=parameter,
+                    level=level,
+                    lead_seconds=lead,
                 )
+            )
         return index
 
     @classmethod
@@ -90,6 +94,7 @@ class Index:
                     last_byte=message.first_byte + message.total_length - 1,
                     reference_time=message.reference_time,
                     parameter=message.parameter,
+                    description=message.description,
                     level=message.level,
                     lead_seconds=message.lead_seconds,
                 )
@@ -139,7 +144,10 @@ def load_remote_message(
     message: Optional[grib2.Message] = None,
     message_number: Optional[int] = None,
 ) -> grib2.Message:
-    if message is None:
-        message = [m for m in index.messages if m.message_number == message_number]
-    _bytes = downloader(grib_url, message.first_byte, message.first_byte + message.total_length - 1)
+    if message is not None:
+        _bytes = downloader(grib_url, message.first_byte, message.first_byte + message.total_length - 1)
+    else:
+        entry = [e for e in index.entries if e.message_number == message_number][0]
+        _bytes = downloader(grib_url, entry.first_byte, entry.last_byte)
     return grib2.extract_first_message(_bytes)
+
