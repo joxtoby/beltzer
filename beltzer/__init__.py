@@ -68,6 +68,8 @@ class Index:
 
         index = cls()
         for i in range(len(rows)):
+            if not rows[i].strip():
+                continue
             message_number, first_byte, ref_time, parameter, level, lead, _ = rows[i].split(":")
             next_first_byte = rows[i + 1].split(":")[1] if i < len(rows) - 1 else None
             index.entries.append(
