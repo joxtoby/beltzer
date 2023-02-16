@@ -78,7 +78,7 @@ class Index:
                     reference_time=ref_time,
                     parameter=parameter,
                     level=level,
-                    lead_seconds=lead,
+                    lead_seconds=int(lead) if lead != 'anl' else 0,
                 )
             )
         return index
