@@ -1,5 +1,6 @@
-import os
 import logging
+import os
+import re
 import struct
 from dataclasses import dataclass
 from datetime import datetime
@@ -72,6 +73,10 @@ class Index:
                 continue
             message_number, first_byte, ref_time, parameter, level, lead, _ = rows[i].split(":")
             next_first_byte = rows[i + 1].split(":")[1] if i < len(rows) - 1 else None
+            if lead == 'anl':
+                lead_seconds = 0
+            elif re.match(r'^\d (hour|hr) (fcst|forecast)$', lead):
+                lead_seconds = int(lead.split(' ')[0]) * 3600
             index.entries.append(
                 IndexEntry(
                     message_number=int(message_number),
@@ -80,7 +85,7 @@ class Index:
                     reference_time=ref_time,
                     parameter=parameter,
                     level=level,
-                    lead_seconds=int(lead) if lead != 'anl' else 0,
+                    lead_seconds=lead_seconds,
                 )
             )
         return index
