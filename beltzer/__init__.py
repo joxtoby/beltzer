@@ -12,7 +12,7 @@ from beltzer import grib2
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger()
 
-__version__ = "0.1.3"
+__version__ = "0.1.4"
 
 @dataclass
 class IndexEntry:
