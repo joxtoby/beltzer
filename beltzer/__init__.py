@@ -12,7 +12,7 @@ from beltzer import grib2
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger()
 
-__version__ = "0.1.4"
+__version__ = "0.1.5"
 
 @dataclass
 class IndexEntry:
@@ -75,7 +75,7 @@ class Index:
             next_first_byte = rows[i + 1].split(":")[1] if i < len(rows) - 1 else None
             if lead == 'anl':
                 lead_seconds = 0
-            elif re.match(r'^\d (hour|hr) (fcst|forecast)$', lead):
+            elif re.match(r'^\d{1,3} (hour|hr) (fcst|forecast)$', lead):
                 lead_seconds = int(lead.split(' ')[0]) * 3600
             index.entries.append(
                 IndexEntry(
