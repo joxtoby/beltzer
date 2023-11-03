@@ -1,3 +1,4 @@
+import json
 import logging
 import os
 import re
@@ -12,7 +13,7 @@ from beltzer import grib2
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger()
 
-__version__ = "0.1.5"
+__version__ = "0.1.6"
 
 @dataclass
 class IndexEntry:
@@ -86,6 +87,32 @@ class Index:
                     parameter=parameter,
                     level=level,
                     lead_seconds=lead_seconds,
+                )
+            )
+        return index
+
+    @classmethod
+    def from_ecmwf_index(cls, index_file: Optional[str] = None, index_data: Optional[str] = None) -> "Index":
+        if index_file:
+            with open(index_file) as _in:
+                index_data = _in.read()
+        rows = [row for row in index_data.split("\n") if row] # strip out any blank lines
+
+        index = cls()
+        for i in range(len(rows)):
+            if not rows[i].strip():
+                continue
+            # {"domain": "g", "date": "20231101", "time": "0000", "expver": "0001", "class": "od", "type": "fc", "stream": "oper", "step": "69", "levtype": "sfc", "param": "st", "_offset": 0, "_length": 278149}
+            data = json.loads(rows[i])
+            index.entries.append(
+                IndexEntry(
+                    message_number=i + 1,
+                    first_byte=data['_offset'],
+                    last_byte=data['_offset'] + data['_length'],
+                    reference_time=f"{data['date']}{data['time'][:2]}",
+                    parameter=data['param'],
+                    level=data['levtype'],
+                    lead_seconds=data['step'] * 3600
                 )
             )
         return index
