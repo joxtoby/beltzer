@@ -13,7 +13,7 @@ from beltzer import grib2
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger()
 
-__version__ = "0.1.6"
+__version__ = "0.1.7"
 
 @dataclass
 class IndexEntry:
@@ -112,7 +112,7 @@ class Index:
                     reference_time=f"{data['date']}{data['time'][:2]}",
                     parameter=data['param'],
                     level=data['levtype'],
-                    lead_seconds=data['step'] * 3600
+                    lead_seconds=int(data['step']) * 3600
                 )
             )
         return index
