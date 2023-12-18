@@ -279,9 +279,9 @@ class Message:
     section5: Section5
     raw_bytes: bytes
     first_byte: int
-    message_number: int
+    message_number: Union[int,float]
 
-    def __init__(self, message_number: int):
+    def __init__(self, message_number: Union[int,float]):
         self.message_number = message_number
 
     @property
@@ -315,7 +315,7 @@ class Message:
         return cls.from_fileobj(fp, msg_num)
 
     @classmethod
-    def from_fileobj(cls, fp: BytesIO, msg_num: Optional[int] = 1) -> "Message":
+    def from_fileobj(cls, fp: BytesIO, msg_num: Optional[int] = 1, skip_sections: list[int] = []) -> "Message":
         msg = cls(msg_num)
         msg.first_byte = fp.tell()
         section0_data = fp.read(16)
@@ -335,15 +335,15 @@ class Message:
             data += fp.read(section_length - 5)
             msg.raw_bytes += data
 
-            if section_number == 1:
+            if section_number == 1 and 1 not in skip_sections:
                 msg.section1 = Section1.parse(data)
-            elif section_number == 3:
+            elif section_number == 3 and 3 not in skip_sections:
                 msg.section3 = Section3.parse(data)
-            elif section_number == 4:
+            elif section_number == 4 and 4 not in skip_sections:
                 msg.section4 = Section4.parse(data)
-            elif section_number == 5:
+            elif section_number == 5 and 5 not in skip_sections:
                 msg.section5 = Section5.parse(data)
-            elif section_number == 7:
+            elif section_number == 7 and 7 not in skip_sections:
                 msg.raw_bytes += fp.read(4)
                 return msg
 
@@ -387,7 +387,7 @@ class Grib2:
         return None
 
     @classmethod
-    def open_grib(cls, grib: Union[str, bytes, BytesIO]) -> "Grib2":
+    def open_grib(cls, grib: Union[str, bytes, BytesIO], skip_sections: list[int] = []) -> "Grib2":
 
         if isinstance(grib, str):
             _in = open(grib, "rb")
@@ -399,11 +399,10 @@ class Grib2:
         msg_num = 1
         grib2 = cls()
         while True:
-            message = Message.from_fileobj(_in, msg_num=msg_num)
+            message = Message.from_fileobj(_in, msg_num=msg_num, skip_sections=skip_sections)
             if message:
                 grib2.messages.append(message)
                 msg_num += 1
-                return grib2 #debug
             else:
                 return grib2
 

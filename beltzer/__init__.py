@@ -13,11 +13,11 @@ from beltzer import grib2
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger()
 
-__version__ = "0.1.7"
+__version__ = "0.1.8"
 
 @dataclass
 class IndexEntry:
-    message_number: int
+    message_number: Union[int,float]
     first_byte: int
     last_byte: int
     reference_time: datetime
@@ -48,7 +48,7 @@ class Index:
         self.entries = []
 
     def get_entry(
-        self, message_number: Optional[int] = None, parameter: Optional[str] = None, level: Optional[str] = None
+        self, message_number: Optional[Union[int,float]] = None, parameter: Optional[str] = None, level: Optional[str] = None
     ) -> IndexEntry:
         for entry in self.entries:
             if entry.message_number is not None and entry.message_number == message_number:
@@ -78,9 +78,13 @@ class Index:
                 lead_seconds = 0
             elif re.match(r'^\d{1,3} (hour|hr) (fcst|forecast)$', lead):
                 lead_seconds = int(lead.split(' ')[0]) * 3600
+            try:
+                msg_num = int(message_number)
+            except ValueError:
+                msg_num = float(message_number)
             index.entries.append(
                 IndexEntry(
-                    message_number=int(message_number),
+                    message_number=msg_num,
                     first_byte=int(first_byte),
                     last_byte=int(next_first_byte) - 1 if next_first_byte else None,
                     reference_time=ref_time,
@@ -137,7 +141,7 @@ class Index:
 
 
 def find_remote_message(
-    grib_url: str, index: Index, message_number: int, downloader: Callable, byte_offset: Optional[int] = 0
+    grib_url: str, index: Index, message_number: Union[int,float], downloader: Callable, byte_offset: Optional[int] = 0
 ) -> grib2.Message:
     logger.info(f"message number: {message_number}")
     entry = index.get_entry(message_number=message_number)
@@ -176,7 +180,7 @@ def load_remote_message(
     grib_url: str,
     downloader: Callable,
     message: Optional[grib2.Message] = None,
-    message_number: Optional[int] = None,
+    message_number: Optional[Union[int,float]] = None,
 ) -> grib2.Message:
     if message is not None:
         _bytes = downloader(grib_url, message.first_byte, message.first_byte + message.total_length - 1)
